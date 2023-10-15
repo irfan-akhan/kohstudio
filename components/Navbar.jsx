@@ -27,7 +27,7 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box position="fixed" minW="full" zIndex={100}>
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
@@ -68,16 +68,16 @@ export default function WithSubnavigation() {
             <Link href="/">KOHSTUDIO</Link>
           </Box>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
-          </Flex>
-        </Flex>
-      </Flex>
+					<Flex display={{ base: "none", md: "flex" }} ml={10}>
+						<DesktopNav />
+					</Flex>
+				</Flex>
+			</Flex>
 
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
-    </Box>
+			<Collapse in={isOpen} animateOpacity>
+				<MobileNav />
+			</Collapse>
+		</Box>
   );
 }
 
