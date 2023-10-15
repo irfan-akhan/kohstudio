@@ -68,16 +68,16 @@ export default function WithSubnavigation() {
             <Link href="/">KOHSTUDIO</Link>
           </Box>
 
-					<Flex display={{ base: "none", md: "flex" }} ml={10}>
-						<DesktopNav />
-					</Flex>
-				</Flex>
-			</Flex>
+          <Flex display={{ base: "none", md: "flex" }} ml={10}>
+            <DesktopNav />
+          </Flex>
+        </Flex>
+      </Flex>
 
-			<Collapse in={isOpen} animateOpacity>
-				<MobileNav />
-			</Collapse>
-		</Box>
+      <Collapse in={isOpen} animateOpacity>
+        <MobileNav />
+      </Collapse>
+    </Box>
   );
 }
 
@@ -98,12 +98,13 @@ const DesktopNav = () => {
                 fontSize={"sm"}
                 fontWeight={500}
                 color={linkColor}
+                textTransform={"capitalize"}
                 _hover={{
                   textDecoration: "none",
                   color: linkHoverColor,
                 }}
               >
-                <Link href={navItem.href ?? "#"}>{navItem.label}</Link>
+                <Link href={navItem.href ?? "#"} style={{textTransform: "capitalize"}}>{navItem.label}</Link>
               </Box>
             </PopoverTrigger>
 
@@ -234,77 +235,83 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: "ARCHITECTURE",
+    label: "architecture",
     children: [
       {
-        label: "HOSPITALITY",
+        label: "hospitality",
         subLabel: "Trending Design to inspire you",
         href: "#",
       },
       {
-        label: "RESIDENTIAL",
+        label: "residential",
         subLabel: "Up-and-coming Designers",
         href: "#",
       },
       {
-        label: "INSTITUTIONAL",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-      {
-        label: "CULTURE",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-      {
-        label: "COMMERCIAL",
+        label: "commercial",
         subLabel: "Up-and-coming Designers",
         href: "#",
       },
     ],
   },
   {
-    label: "INTERIOR",
+    label: "interior",
     children: [
       {
-        label: "HOTELS",
+        label: "hotels",
         subLabel: "Find your dream design job",
         href: "#",
       },
       {
-        label: "HOMES",
+        label: "homes",
         subLabel: "An exclusive list for contract work",
         href: "#",
       },
       {
-        label: "WORKPLACE",
+        label: "workplace",
         subLabel: "An exclusive list for contract work",
         href: "#",
       },
     ],
   },
   {
-    label: "ABOUT",
+    label: "landscape",
+    href: "/contact",
+  },
+  {
+    label: "urban design",
+    href: "/contact",
+  },
+
+  {
+    label: "exhibition",
+    href: "/contact",
+  },
+  {
+    label: "product design",
+    href: "/contact",
+  },
+  {
+    label: "team",
+    href: "/contact",
+  },
+  {
+    label: "about",
     children: [
       {
-        label: "OFFICES",
+        label: "offices",
         subLabel: "An exclusive list for contract work",
         href: "/aboutus",
       },
       {
-        label: "TEAM",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-      {
-        label: "CARERRS",
+        label: "carrers",
         subLabel: "An exclusive list for contract work",
         href: "#",
       },
     ],
   },
   {
-    label: "CONTACT",
+    label: "contact",
     href: "/contact",
   },
 ];
