@@ -27,57 +27,63 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
-      <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
-        minH={"80px"}
-        py={{ base: 2 }}
-        px={{ base: 10 }}
-        borderBottom={1}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
-        align={"center"}
-      >
-        <Flex
-          flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
-          display={{ base: "flex", md: "none" }}
-        >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? (
-                <AiOutlineClose w={3} h={3} />
-              ) : (
-                <RxHamburgerMenu w={5} h={5} />
-              )
-            }
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
-          />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
-            fontWeight={"700"}
-            fontSize={"20px"}
-          >
-            <Link href="/">KOHSTUDIO</Link>
-          </Text>
+		<Box position="fixed" minW="full" zIndex={100}>
+			<Flex
+				bg={useColorModeValue("white", "gray.800")}
+				color={useColorModeValue("gray.600", "white")}
+				minH={"60px"}
+				py={{ base: 2 }}
+				px={{ base: 10 }}
+				borderBottom={1}
+				borderStyle={"solid"}
+				borderColor={useColorModeValue("gray.200", "gray.900")}
+				align={"center"}
+			>
+				<Flex
+					flex={{ base: 1, md: "auto" }}
+					ml={{ base: -2 }}
+					display={{ base: "flex", md: "none" }}
+				>
+					<IconButton
+						onClick={onToggle}
+						icon={
+							isOpen ? (
+								<AiOutlineClose w={3} h={3} />
+							) : (
+								<RxHamburgerMenu w={5} h={5} />
+							)
+						}
+						variant={"ghost"}
+						aria-label={"Toggle Navigation"}
+					/>
+				</Flex>
+				<Flex
+					flex={{ base: 1 }}
+					justify={{ base: "center", md: "start" }}
+				>
+					<Text
+						textAlign={useBreakpointValue({
+							base: "center",
+							md: "left",
+						})}
+						fontFamily={"heading"}
+						color={useColorModeValue("gray.800", "white")}
+						fontWeight={"700"}
+						fontSize={"20px"}
+					>
+						<Link href="/">KOHSTUDIO</Link>
+					</Text>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
-          </Flex>
-        </Flex>
-      </Flex>
+					<Flex display={{ base: "none", md: "flex" }} ml={10}>
+						<DesktopNav />
+					</Flex>
+				</Flex>
+			</Flex>
 
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
-    </Box>
+			<Collapse in={isOpen} animateOpacity>
+				<MobileNav />
+			</Collapse>
+		</Box>
   );
 }
 
