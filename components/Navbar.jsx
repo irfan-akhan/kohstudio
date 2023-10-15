@@ -21,6 +21,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import Link from "next/link";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -30,9 +31,9 @@ export default function WithSubnavigation() {
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
-        minH={"60px"}
+        minH={"80px"}
         py={{ base: 2 }}
-        px={{ base: 4 }}
+        px={{ base: 10 }}
         borderBottom={1}
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.900")}
@@ -61,8 +62,10 @@ export default function WithSubnavigation() {
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
+            fontWeight={"700"}
+            fontSize={"20px"}
           >
-            KOHSTUDIO
+            <Link href="/">KOHSTUDIO</Link>
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -318,23 +321,22 @@ const NAV_ITEMS = [
   {
     label: "ABOUT",
     children: [
-        {
-            label: "OFFICES",
-            subLabel: "An exclusive list for contract work",
-            href: "#",  
-        },
-        {
-            label: "TEAM",
-            subLabel: "An exclusive list for contract work",
-            href: "#",  
-        },
-        {
-            label: "CARERRS",
-            subLabel: "An exclusive list for contract work",
-            href: "#",  
-        },
-
-    ]
+      {
+        label: "OFFICES",
+        subLabel: "An exclusive list for contract work",
+        href: "#",
+      },
+      {
+        label: "TEAM",
+        subLabel: "An exclusive list for contract work",
+        href: "#",
+      },
+      {
+        label: "CARERRS",
+        subLabel: "An exclusive list for contract work",
+        href: "#",
+      },
+    ],
   },
   {
     label: "CONTACT",
