@@ -239,17 +239,14 @@ const NAV_ITEMS = [
     children: [
       {
         label: "hospitality",
-        subLabel: "Trending Design to inspire you",
         href: "#",
       },
       {
         label: "residential",
-        subLabel: "Up-and-coming Designers",
         href: "#",
       },
       {
         label: "commercial",
-        subLabel: "Up-and-coming Designers",
         href: "#",
       },
     ],
@@ -259,17 +256,15 @@ const NAV_ITEMS = [
     children: [
       {
         label: "hotels",
-        subLabel: "Find your dream design job",
+        
         href: "#",
       },
       {
         label: "homes",
-        subLabel: "An exclusive list for contract work",
         href: "#",
       },
       {
         label: "workplace",
-        subLabel: "An exclusive list for contract work",
         href: "#",
       },
     ],
@@ -290,6 +285,23 @@ const NAV_ITEMS = [
   {
     label: "product design",
     href: "/contact",
+  },
+  {
+    label: "international",
+    children: [
+      {
+        label: "architecture",
+        href: "/aboutus",
+      },
+      {
+        label: "interior",
+        href: "#",
+      },
+      {
+        label: "exhibition",
+        href: "#",
+      },
+    ],
   },
   {
     label: "team",
