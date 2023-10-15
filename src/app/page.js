@@ -10,7 +10,7 @@ export default function Home() {
 		<main>
 			<Hero />
 			<Why />
-			<Expertise order="1" />
+			<Expertise />
 			<Testimonials />
 			<Clients />
 			<Ourteam />

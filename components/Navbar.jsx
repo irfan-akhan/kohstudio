@@ -58,7 +58,7 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
+          <Box
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
@@ -66,7 +66,7 @@ export default function WithSubnavigation() {
             fontSize={"20px"}
           >
             <Link href="/">KOHSTUDIO</Link>
-          </Text>
+          </Box>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
@@ -142,14 +142,16 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
-          <Text
+          <Box
             transition={"all .3s ease"}
             _groupHover={{ color: "pink.400" }}
             fontWeight={500}
           >
             <Link href={href}>{label}</Link>
-          </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
+          </Box>
+          <Box fontSize={"sm"}>
+            <Link href={href}> {subLabel}</Link>
+          </Box>
         </Box>
         <Flex
           transition={"all .3s ease"}
@@ -195,12 +197,9 @@ const MobileNavItem = ({ label, children, href }) => {
           textDecoration: "none",
         }}
       >
-        <Text
-          fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
-        >
+        <Box fontWeight={600} color={useColorModeValue("gray.600", "gray.200")}>
           <Link href={href ?? "#"}> {label}</Link>
-        </Text>
+        </Box>
         {children && (
           <Icon
             as={AiOutlineArrowDown}
@@ -290,7 +289,7 @@ const NAV_ITEMS = [
       {
         label: "OFFICES",
         subLabel: "An exclusive list for contract work",
-        href: "#",
+        href: "/aboutus",
       },
       {
         label: "TEAM",
@@ -306,6 +305,6 @@ const NAV_ITEMS = [
   },
   {
     label: "CONTACT",
-    href: "#",
+    href: "/contact",
   },
 ];
