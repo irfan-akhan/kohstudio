@@ -21,6 +21,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import Link from "next/link";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -30,9 +31,9 @@ export default function WithSubnavigation() {
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
-        minH={"60px"}
+        minH={"80px"}
         py={{ base: 2 }}
-        px={{ base: 4 }}
+        px={{ base: 10 }}
         borderBottom={1}
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.900")}
@@ -61,45 +62,16 @@ export default function WithSubnavigation() {
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
+            fontWeight={"700"}
+            fontSize={"20px"}
           >
-            KOHSTUDIO
+            <Link href="/">KOHSTUDIO</Link>
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
-
-        {/* <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={"flex-end"}
-          direction={"row"}
-          spacing={6}
-        >
-          <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={"link"}
-            href={"#"}
-          >
-            Sign In
-          </Button>
-          <Button
-            as={"a"}
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"pink.400"}
-            href={"#"}
-            _hover={{
-              bg: "pink.300",
-            }}
-          >
-            Sign Up
-          </Button>
-        </Stack> */}
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -123,7 +95,6 @@ const DesktopNav = () => {
               <Box
                 as="a"
                 p={2}
-                href={navItem.href ?? "#"}
                 fontSize={"sm"}
                 fontWeight={500}
                 color={linkColor}
@@ -132,7 +103,7 @@ const DesktopNav = () => {
                   color: linkHoverColor,
                 }}
               >
-                {navItem.label}
+                <Link href={navItem.href ?? "#"}>{navItem.label}</Link>
               </Box>
             </PopoverTrigger>
 
@@ -163,7 +134,6 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Box
       as="a"
-      href={href}
       role={"group"}
       display={"block"}
       p={2}
@@ -177,7 +147,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
             _groupHover={{ color: "pink.400" }}
             fontWeight={500}
           >
-            {label}
+            <Link href={href}>{label}</Link>
           </Text>
           <Text fontSize={"sm"}>{subLabel}</Text>
         </Box>
@@ -219,7 +189,6 @@ const MobileNavItem = ({ label, children, href }) => {
       <Box
         py={2}
         as="a"
-        href={href ?? "#"}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
@@ -230,7 +199,7 @@ const MobileNavItem = ({ label, children, href }) => {
           fontWeight={600}
           color={useColorModeValue("gray.600", "gray.200")}
         >
-          {label}
+          <Link href={href ?? "#"}> {label}</Link>
         </Text>
         {children && (
           <Icon
@@ -254,8 +223,8 @@ const MobileNavItem = ({ label, children, href }) => {
         >
           {children &&
             children.map((child) => (
-              <Box as="a" key={child.label} py={2} href={child.href}>
-                {child.label}
+              <Box as="a" key={child.label} py={2}>
+                <Link href={child.href}>{child.label}</Link>
               </Box>
             ))}
         </Stack>
@@ -318,23 +287,22 @@ const NAV_ITEMS = [
   {
     label: "ABOUT",
     children: [
-        {
-            label: "OFFICES",
-            subLabel: "An exclusive list for contract work",
-            href: "#",  
-        },
-        {
-            label: "TEAM",
-            subLabel: "An exclusive list for contract work",
-            href: "#",  
-        },
-        {
-            label: "CARERRS",
-            subLabel: "An exclusive list for contract work",
-            href: "#",  
-        },
-
-    ]
+      {
+        label: "OFFICES",
+        subLabel: "An exclusive list for contract work",
+        href: "#",
+      },
+      {
+        label: "TEAM",
+        subLabel: "An exclusive list for contract work",
+        href: "#",
+      },
+      {
+        label: "CARERRS",
+        subLabel: "An exclusive list for contract work",
+        href: "#",
+      },
+    ],
   },
   {
     label: "CONTACT",
