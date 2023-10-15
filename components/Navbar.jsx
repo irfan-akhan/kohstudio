@@ -134,7 +134,6 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Box
       as="a"
-      href={href}
       role={"group"}
       display={"block"}
       p={2}
@@ -148,7 +147,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
             _groupHover={{ color: "pink.400" }}
             fontWeight={500}
           >
-            {label}
+            <Link href={href}>{label}</Link>
           </Text>
           <Text fontSize={"sm"}>{subLabel}</Text>
         </Box>
