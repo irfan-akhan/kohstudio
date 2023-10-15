@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 
 const IMAGE =
-	"https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80";
+	"https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg";
 
 export default function ProductSimple() {
 	return (
@@ -70,26 +70,15 @@ export default function ProductSimple() {
 							fontSize={"sm"}
 							textTransform={"uppercase"}
 						>
-							Brand
+							Danish
 						</Text>
 						<Heading
 							fontSize={"2xl"}
 							fontFamily={"body"}
 							fontWeight={500}
 						>
-							Nice Chair, pink
+							Mandibal, Nowshehra
 						</Heading>
-						<Stack direction={"row"} align={"center"}>
-							<Text fontWeight={800} fontSize={"xl"}>
-								$57
-							</Text>
-							<Text
-								textDecoration={"line-through"}
-								color={"gray.600"}
-							>
-								$199
-							</Text>
-						</Stack>
 					</Stack>
 				</Box>
 				<Box
@@ -141,26 +130,15 @@ export default function ProductSimple() {
 							fontSize={"sm"}
 							textTransform={"uppercase"}
 						>
-							Brand
+							Rakib
 						</Text>
 						<Heading
 							fontSize={"2xl"}
 							fontFamily={"body"}
 							fontWeight={500}
 						>
-							Nice Chair, pink
+							Mandibal, Nowshehra
 						</Heading>
-						<Stack direction={"row"} align={"center"}>
-							<Text fontWeight={800} fontSize={"xl"}>
-								$57
-							</Text>
-							<Text
-								textDecoration={"line-through"}
-								color={"gray.600"}
-							>
-								$199
-							</Text>
-						</Stack>
 					</Stack>
 				</Box>
 				<Box
@@ -212,26 +190,15 @@ export default function ProductSimple() {
 							fontSize={"sm"}
 							textTransform={"uppercase"}
 						>
-							Brand
+							Aqib
 						</Text>
 						<Heading
 							fontSize={"2xl"}
 							fontFamily={"body"}
 							fontWeight={500}
 						>
-							Nice Chair, pink
+							Mandibal, Nowshehra
 						</Heading>
-						<Stack direction={"row"} align={"center"}>
-							<Text fontWeight={800} fontSize={"xl"}>
-								$57
-							</Text>
-							<Text
-								textDecoration={"line-through"}
-								color={"gray.600"}
-							>
-								$199
-							</Text>
-						</Stack>
 					</Stack>
 				</Box>
 			</Center>
