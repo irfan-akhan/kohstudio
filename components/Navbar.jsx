@@ -27,63 +27,57 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-		<Box position="fixed" minW="full" zIndex={100}>
-			<Flex
-				bg={useColorModeValue("white", "gray.800")}
-				color={useColorModeValue("gray.600", "white")}
-				minH={"60px"}
-				py={{ base: 2 }}
-				px={{ base: 10 }}
-				borderBottom={1}
-				borderStyle={"solid"}
-				borderColor={useColorModeValue("gray.200", "gray.900")}
-				align={"center"}
-			>
-				<Flex
-					flex={{ base: 1, md: "auto" }}
-					ml={{ base: -2 }}
-					display={{ base: "flex", md: "none" }}
-				>
-					<IconButton
-						onClick={onToggle}
-						icon={
-							isOpen ? (
-								<AiOutlineClose w={3} h={3} />
-							) : (
-								<RxHamburgerMenu w={5} h={5} />
-							)
-						}
-						variant={"ghost"}
-						aria-label={"Toggle Navigation"}
-					/>
-				</Flex>
-				<Flex
-					flex={{ base: 1 }}
-					justify={{ base: "center", md: "start" }}
-				>
-					<Text
-						textAlign={useBreakpointValue({
-							base: "center",
-							md: "left",
-						})}
-						fontFamily={"heading"}
-						color={useColorModeValue("gray.800", "white")}
-						fontWeight={"700"}
-						fontSize={"20px"}
-					>
-						<Link href="/">KOHSTUDIO</Link>
-					</Text>
+    <Box position="fixed" minW="full" zIndex={100}>
+      <Flex
+        bg={useColorModeValue("white", "gray.800")}
+        color={useColorModeValue("gray.600", "white")}
+        minH={"80px"}
+        py={{ base: 2 }}
+        px={{ base: 10 }}
+        borderBottom={1}
+        borderStyle={"solid"}
+        borderColor={useColorModeValue("gray.200", "gray.900")}
+        align={"center"}
+      >
+        <Flex
+          flex={{ base: 1, md: "auto" }}
+          ml={{ base: -2 }}
+          display={{ base: "flex", md: "none" }}
+        >
+          <IconButton
+            onClick={onToggle}
+            icon={
+              isOpen ? (
+                <AiOutlineClose w={3} h={3} />
+              ) : (
+                <RxHamburgerMenu w={5} h={5} />
+              )
+            }
+            variant={"ghost"}
+            aria-label={"Toggle Navigation"}
+          />
+        </Flex>
+        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+          <Box
+            textAlign={useBreakpointValue({ base: "center", md: "left" })}
+            fontFamily={"heading"}
+            color={useColorModeValue("gray.800", "white")}
+            fontWeight={"700"}
+            fontSize={"20px"}
+          >
+            <Link href="/">KOHSTUDIO</Link>
+          </Box>
 
-					<Flex display={{ base: "none", md: "flex" }} ml={10}>
-						<DesktopNav />
-					</Flex>
-				</Flex>
-			</Flex>
+          <Flex display={{ base: "none", md: "flex" }} ml={10}>
+            <DesktopNav />
+          </Flex>
+        </Flex>
+      </Flex>
 
-			<Collapse in={isOpen} animateOpacity>
-				<MobileNav />
-			</Collapse>
-		</Box>
+      <Collapse in={isOpen} animateOpacity>
+        <MobileNav />
+      </Collapse>
+    </Box>
   );
 }
 
@@ -104,12 +98,13 @@ const DesktopNav = () => {
                 fontSize={"sm"}
                 fontWeight={500}
                 color={linkColor}
+                textTransform={"capitalize"}
                 _hover={{
                   textDecoration: "none",
                   color: linkHoverColor,
                 }}
               >
-                <Link href={navItem.href ?? "#"}>{navItem.label}</Link>
+                <Link href={navItem.href ?? "#"} style={{textTransform: "capitalize"}}>{navItem.label}</Link>
               </Box>
             </PopoverTrigger>
 
@@ -148,26 +143,17 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
-          <Text
+          <Box
             transition={"all .3s ease"}
             _groupHover={{ color: "pink.400" }}
             fontWeight={500}
           >
-            <Link href={href}>{label}</Link>
-          </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
+            <Link href={href} style={{textTransform: "capitalize"}}>{label}</Link>
+          </Box>
+          <Box fontSize={"sm"} >
+            <Link href={href}> {subLabel}</Link>
+          </Box>
         </Box>
-        <Flex
-          transition={"all .3s ease"}
-          transform={"translateX(-10px)"}
-          opacity={0}
-          _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
-          justify={"flex-end"}
-          align={"center"}
-          flex={1}
-        >
-          <Icon color={"pink.400"} w={5} h={5} as={AiOutlineArrowRight} />
-        </Flex>
       </Stack>
     </Box>
   );
@@ -201,12 +187,9 @@ const MobileNavItem = ({ label, children, href }) => {
           textDecoration: "none",
         }}
       >
-        <Text
-          fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
-        >
+        <Box fontWeight={600} color={useColorModeValue("gray.600", "gray.200")}>
           <Link href={href ?? "#"}> {label}</Link>
-        </Text>
+        </Box>
         {children && (
           <Icon
             as={AiOutlineArrowDown}
@@ -241,77 +224,95 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: "ARCHITECTURE",
+    label: "architecture",
     children: [
       {
-        label: "HOSPITALITY",
-        subLabel: "Trending Design to inspire you",
+        label: "hospitality",
         href: "#",
       },
       {
-        label: "RESIDENTIAL",
-        subLabel: "Up-and-coming Designers",
+        label: "residential",
         href: "#",
       },
       {
-        label: "INSTITUTIONAL",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-      {
-        label: "CULTURE",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-      {
-        label: "COMMERCIAL",
-        subLabel: "Up-and-coming Designers",
+        label: "commercial",
         href: "#",
       },
     ],
   },
   {
-    label: "INTERIOR",
+    label: "interior",
     children: [
       {
-        label: "HOTELS",
-        subLabel: "Find your dream design job",
+        label: "hotels",
+        
         href: "#",
       },
       {
-        label: "HOMES",
+        label: "homes",
+        href: "#",
+      },
+      {
+        label: "workplace",
+        href: "#",
+      },
+    ],
+  },
+  {
+    label: "landscape",
+    href: "/contact",
+  },
+  {
+    label: "urban design",
+    href: "/contact",
+  },
+
+  {
+    label: "exhibition",
+    href: "/contact",
+  },
+  {
+    label: "product design",
+    href: "/contact",
+  },
+  {
+    label: "international",
+    children: [
+      {
+        label: "architecture",
+        href: "/aboutus",
+      },
+      {
+        label: "interior",
+        href: "#",
+      },
+      {
+        label: "exhibition",
+        href: "#",
+      },
+    ],
+  },
+  {
+    label: "team",
+    href: "/contact",
+  },
+  {
+    label: "about",
+    children: [
+      {
+        label: "offices",
         subLabel: "An exclusive list for contract work",
-        href: "#",
+        href: "/aboutus",
       },
       {
-        label: "WORKPLACE",
+        label: "carrers",
         subLabel: "An exclusive list for contract work",
         href: "#",
       },
     ],
   },
   {
-    label: "ABOUT",
-    children: [
-      {
-        label: "OFFICES",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-      {
-        label: "TEAM",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-      {
-        label: "CARERRS",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "CONTACT",
-    href: "#",
+    label: "contact",
+    href: "/contact",
   },
 ];
