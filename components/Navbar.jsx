@@ -228,7 +228,7 @@ const NAV_ITEMS = [
     children: [
       {
         label: "hospitality",
-        href: "#",
+        href: "/projects",
       },
       {
         label: "residential",
