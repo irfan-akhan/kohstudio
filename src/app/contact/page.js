@@ -93,6 +93,8 @@ export default function Contact() {
 												_hover={{
 													border: "2px solid #1C6FEB",
 												}}
+												as="a"
+												href="mailto:info@kohstudio.in"
 												leftIcon={
 													<MdEmail
 														color="#1970F1"
