@@ -1,198 +1,255 @@
+"use client";
+
 import {
 	Container,
 	Flex,
+	Box,
 	Heading,
+	Text,
+	IconButton,
+	Button,
 	VStack,
 	HStack,
-	Text,
-	Divider,
-	Link,
+	Wrap,
+	WrapItem,
 	FormControl,
-	InputLeftElement,
-	InputGroup,
 	FormLabel,
 	Input,
+	InputGroup,
+	InputLeftElement,
 	Textarea,
-	Button,
+	Link,
+	Divider,
 } from "@chakra-ui/react";
-import React from "react";
-import Page from "./pagee";
-import { BsFacebook, BsLinkedin, BsPerson } from "react-icons/bs";
-import { FiInstagram } from "react-icons/fi";
-import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
+import { MdPhone, MdFacebook, MdOutlineEmail } from "react-icons/md";
+import { BsPerson, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { useRef } from "react";
 
-const Contact = () => {
+export default function Contact() {
+	const nameRef = useRef(null);
+	const emailRef = useRef(null);
+	const phoneRef = useRef(null);
+	const messageRef = useRef(null);
+	function submitHandler(e) {
+		e.preventDefault();
+		const data = {
+			email: emailRef.current.value,
+			name: nameRef.current.value,
+			phone: phoneRef.current.value,
+			message: messageRef.current.value,
+		};
+		fetch("/api/contact", {
+			method: "POST",
+			headers: {
+				Accept: "application/json, text/plain, */*",
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		})
+			.then((res) => {
+				console.log("Response received");
+				if (res.status === 200) {
+					console.log("Response succeeded!");
+				}
+			})
+			.catch((err) => console.log("err", err));
+	}
+
 	return (
 		<Container
-			mt="15vh"
-			minH="150vh"
 			minW="100vw"
 			backgroundSize="cover"
 			backgroundRepeat="no-repeat"
 			background="url(https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXJjaGl0ZWN0dXJlfGVufDB8fDB8fHww&w=1000&q=80)"
+			maxW="full"
+			centerContent
+			overflow="hidden"
+			pb="10vh"
 		>
-			<Flex position="relative" minH="100vh" justify="center">
-				<Flex
-					position={"absolute"}
-					width="85%"
-					borderRadius="2xl"
-					// background="#f1f2f6"
-					top="20vh"
-					p="2rem"
-					minH="100vh"
-				>
-					<Flex width={"80%"} direction="column" m="auto">
-						<Flex direction="column" color="whitesmoke">
-							<Heading fontWeight="normal" as="h2">
-								for business
-							</Heading>
-							<Text as="p" py="3">
-								We are an award-winning interdisciplinary design
-								practice that believes in delivering enriching
-								design solutions through a value–driven process
-								empowering all stakeholders and the environment
-							</Text>
-						</Flex>
-						<Flex
-							my="5"
-							justify="stretch"
-							// alignItems="center"
-							background="white"
-							// placeItems="center"
-						>
-							<Flex
-								direction="column"
-								p="5"
-								width={{ base: "100%", sm: "70%" }}
-							>
-								<Text
-									as="p"
-									pl="2rem"
-									mt="5"
-									fontWeight="semibold"
-								>
-									Contact Us
-								</Text>
-								<VStack spacing={2} p="2rem">
-									<FormControl id="name">
-										<FormLabel>Your Name</FormLabel>
-										<InputGroup borderColor="#E0E1E7">
-											<InputLeftElement pointerEvents="none">
-												<BsPerson color="gray.800" />
-											</InputLeftElement>
-											<Input type="text" size="md" />
-										</InputGroup>
-									</FormControl>
-									<FormControl id="name">
-										<FormLabel>Mail</FormLabel>
-										<InputGroup borderColor="#E0E1E7">
-											<InputLeftElement pointerEvents="none">
-												<MdOutlineEmail color="gray.800" />
-											</InputLeftElement>
-											<Input type="text" size="md" />
-										</InputGroup>
-									</FormControl>
-									<FormControl id="name">
-										<FormLabel>Phone</FormLabel>
-										<InputGroup borderColor="#E0E1E7">
-											<InputLeftElement pointerEvents="none">
-												<MdOutlinePhone color="gray.800" />
-											</InputLeftElement>
-											<Input type="number" size="md" />
-										</InputGroup>
-									</FormControl>
-									<FormControl id="name">
-										<FormLabel>Message</FormLabel>
-										<Textarea
-											borderColor="gray.300"
-											_hover={{
-												borderRadius: "gray.300",
-											}}
-											placeholder="message"
-										/>
-									</FormControl>
-									<FormControl id="name" float="right">
-										<Button
-											size="lg"
-											// width={"100%"}
-											variant="solid"
-											bg="black"
-											color="white"
-											_hover={{
-												background: "gray.800",
+			<Flex mt={"45vh"} direction="column" align="center" width="85vw">
+				<Flex direction="column" align="center" m="6" color="white">
+					<Heading textTransform="capitalize" as="h3" my="3">
+						contact us
+					</Heading>
+					<Text as="p" fontWeight="medium">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Quod officia, dolor et alias ad ducimus sunt modi
+						doloribus temporibus voluptatum iste commodi laudantium
+						tempora recusandae odit quisquam voluptas. Illum, iusto.
+					</Text>
+				</Flex>
+				<Box bg="#000" width={{ base: "full", md: "70%" }}>
+					<Wrap>
+						<WrapItem width={{ base: "full", md: "70%" }}>
+							<Box width="full" bg="white">
+								<Box m={8} color="#0B0E3F">
+									<VStack spacing={5}>
+										<form
+											onSubmit={submitHandler}
+											style={{
+												margin: 0,
+												p: 0,
+												width: "100%",
 											}}
 										>
-											Submit
-										</Button>
-									</FormControl>
-								</VStack>
-							</Flex>
-							<Flex
-								direction="column"
-								p="2"
-								mt="6rem"
-								// background="gray.400"
-								width={{ base: "100%", sm: "40%" }}
-							>
-								<Text as="h3" fontWeight="semibold">
-									Address
-								</Text>
-								<Text as="p">
+											<FormControl isRequired id="name">
+												<FormLabel>Your Name</FormLabel>
+												<InputGroup borderColor="#E0E1E7">
+													<InputLeftElement pointerEvents="none">
+														<BsPerson color="gray.800" />
+													</InputLeftElement>
+													<Input
+														ref={nameRef}
+														name="name"
+														type="text"
+														size="md"
+													/>
+												</InputGroup>
+											</FormControl>
+											<FormControl isRequired id="name">
+												<FormLabel>Mail</FormLabel>
+												<InputGroup borderColor="#E0E1E7">
+													<InputLeftElement pointerEvents="none">
+														<MdOutlineEmail color="gray.800" />
+													</InputLeftElement>
+													<Input
+														type="email"
+														size="md"
+														name="email"
+														ref={emailRef}
+													/>
+												</InputGroup>
+											</FormControl>
+											<FormControl isRequired id="phone">
+												<FormLabel>Phone</FormLabel>
+												<InputGroup borderColor="#E0E1E7">
+													<InputLeftElement pointerEvents="none">
+														<MdPhone color="gray.800" />
+													</InputLeftElement>
+													<Input
+														type="number"
+														size="md"
+														name="phone"
+														ref={phoneRef}
+													/>
+												</InputGroup>
+											</FormControl>
+											<FormControl
+												isRequired
+												id="message"
+											>
+												<FormLabel>Message</FormLabel>
+												<Textarea
+													ref={messageRef}
+													borderColor="gray.300"
+													_hover={{
+														borderRadius:
+															"gray.300",
+													}}
+													name="message"
+													placeholder="message"
+												/>
+											</FormControl>
+											<FormControl id="name" my="5">
+												<Button
+													variant="solid"
+													bg="#000"
+													color="white"
+													type="submit"
+													_hover={{ bg: "gray.700" }}
+												>
+													Send
+												</Button>
+											</FormControl>
+										</form>
+									</VStack>
+								</Box>
+							</Box>
+						</WrapItem>
+						<WrapItem mt="2.5rem">
+							<Box color="#fff" pl={{ base: "1rem", md: "2rem" }}>
+								<Heading>Address</Heading>
+								<Text
+									mt={{ sm: 3, md: 3, lg: 5 }}
+									color="gray.400"
+								>
 									F 301 First Floor <br />
-									Mandibal Hawal
+									Hawal First Junction
 									<br />
-									Srinagar 190011
+									Srinagar 190011 <br />
 								</Text>
-								<Divider my="1.5rem" color="black" />
-								<Text as="p">Email</Text>
-								<Text>
-									<Link href="mailto:info@kohstudio.in">
+								<Divider my="1.2rem" />
+								<Flex
+									align="center"
+									_hover={{
+										color: "#1C6FEB",
+									}}
+								>
+									<MdOutlineEmail color="gray.800" />
+									<Link
+										ml="2"
+										color="#DCE2FF"
+										as="a"
+										isExternal
+										href="mailto:info@kohstudio.in"
+										_hover={{
+											color: "#1C6FEB",
+										}}
+									>
 										info@kohstudio.in
 									</Link>
-								</Text>
-								<Divider my="1rem" color="black" />
-								<HStack>
-									<Link
-										href="https://facebook.com"
-										isExternal
-									>
-										{/* Facebook */}
-										<BsFacebook
-											fontSize="1.5rem"
-											color="blue"
-											mx="6px"
-										/>
-									</Link>
-									<Link
-										href="https://instagram.com"
-										isExternal
-									>
-										{/* Instagram */}
-										<FiInstagram
-											fontSize="1.5rem"
-											color="red"
-											mx="6px"
-										/>
-									</Link>
-									<Link
-										href="https://instagram.com"
-										isExternal
-									>
-										{/* facebook */}
-										<BsLinkedin
-											color="blue"
-											mx="6px"
-											fontSize="1.5rem"
-										/>
-									</Link>
+								</Flex>
+								<Divider my="2rem" />
+								<HStack
+									mt={{ lg: 5, md: 5 }}
+									alignItems="flex-start"
+								>
+									<IconButton
+										aria-label="facebook"
+										variant="ghost"
+										size="lg"
+										isRound={true}
+										_hover={{ bg: "#0D74FF" }}
+										icon={
+											<MdFacebook
+												size="18px"
+												color="white"
+											/>
+										}
+									/>
+									<IconButton
+										aria-label="github"
+										variant="ghost"
+										size="lg"
+										isRound={true}
+										_hover={{ bg: "#0D74FF" }}
+										icon={
+											<BsLinkedin
+												size="18px"
+												color="white"
+											/>
+										}
+									/>
+									<IconButton
+										aria-label="discord"
+										variant="ghost"
+										size="lg"
+										isRound={true}
+										_hover={{ bg: "#0D74FF" }}
+										icon={
+											<BsInstagram
+												size="18px"
+												color="white"
+											/>
+										}
+									/>
 								</HStack>
-							</Flex>
-						</Flex>
-					</Flex>
-				</Flex>
+							</Box>
+						</WrapItem>
+					</Wrap>
+				</Box>
+				{/* </Box> */}
 			</Flex>
 		</Container>
 	);
-};
-
-export default Contact;
+}
