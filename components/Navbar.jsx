@@ -294,7 +294,7 @@ const NAV_ITEMS = [
   },
   {
     label: "team",
-    href: "/contact",
+    href: "/ourteam",
   },
   {
     label: "about",
