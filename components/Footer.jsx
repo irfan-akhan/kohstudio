@@ -27,7 +27,7 @@ export default function Footer() {
 			bg={useColorModeValue("gray.800", "gray.800")}
 			color={useColorModeValue("white", "white")}
 		>
-			<Container as={Stack} maxW={"6xl"} minH="80vh" py={20}>
+			<Container as={Stack} maxW={"6xl"} minH="60vh" py={20}>
 				<SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
 					<Stack align={"flex-start"}>
 						<ListHeader>Product</ListHeader>
@@ -110,7 +110,7 @@ export default function Footer() {
 					</Stack>
 				</SimpleGrid>
 			</Container>
-			<Box py={10}>
+			{/* <Box py={10}>
 				<Flex
 					align={"center"}
 					_before={{
@@ -128,10 +128,7 @@ export default function Footer() {
 						ml: 8,
 					}}
 				></Flex>
-				<Text pt={6} fontSize={"sm"} textAlign={"center"}>
-					© 2022 Chakra Templates. All rights reserved
-				</Text>
-			</Box>
+			</Box> */}
 		</Box>
 	);
 }
