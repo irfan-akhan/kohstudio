@@ -301,13 +301,11 @@ const NAV_ITEMS = [
     children: [
       {
         label: "offices",
-        subLabel: "An exclusive list for contract work",
         href: "/aboutus",
       },
       {
         label: "carrers",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
+        href: "/careers",
       },
     ],
   },
