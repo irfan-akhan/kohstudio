@@ -66,7 +66,7 @@ export default function Contact() {
 			overflow="hidden"
 			pb="10vh"
 		>
-			<Flex mt={"45vh"} direction="column" align="center" width="85vw">
+			<Flex mt={"30vh"} direction="column" align="center" width="85vw">
 				<Flex direction="column" align="center" m="6" color="white">
 					<Heading textTransform="capitalize" as="h3" my="3">
 						contact us

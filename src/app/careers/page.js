@@ -1,6 +1,6 @@
 import { Container, Flex, Heading } from '@chakra-ui/react'
 import React from 'react'
-import Card from '../../../components/Card'
+import Card from '../../../components/CareersCard'
 
 export default function page() {
   return (
