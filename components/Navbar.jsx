@@ -22,63 +22,72 @@ import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function WithSubnavigation() {
-  const { isOpen, onToggle } = useDisclosure();
+	const { isOpen, onToggle } = useDisclosure();
 
-  return (
-    <Box position="fixed" minW="full" zIndex={100}>
-      <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
-        minH={"80px"}
-        py={{ base: 2 }}
-        px={{ base: 10 }}
-        borderBottom={1}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
-        align={"center"}
-      >
-        <Flex
-          flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
-          display={{ base: "flex", md: "none" }}
-        >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? (
-                <AiOutlineClose w={3} h={3} />
-              ) : (
-                <RxHamburgerMenu w={5} h={5} />
-              )
-            }
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
-          />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Box
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
-            fontWeight={"700"}
-            fontSize={"20px"}
-          >
-            <Link href="/">KOHSTUDIO</Link>
-          </Box>
+	return (
+		<Box position="fixed" minW="full" zIndex={100}>
+			<Flex
+				bg={useColorModeValue("white", "gray.800")}
+				color={useColorModeValue("gray.600", "white")}
+				minH={"80px"}
+				py={{ base: 2 }}
+				px={{ base: 10 }}
+				borderBottom={1}
+				borderStyle={"solid"}
+				borderColor={useColorModeValue("gray.200", "gray.900")}
+				align={"center"}
+			>
+				<Flex
+					flex={{ base: 1, md: "auto" }}
+					ml={{ base: -2 }}
+					display={{ base: "flex", md: "none" }}
+				>
+					<IconButton
+						onClick={onToggle}
+						icon={
+							isOpen ? (
+								<AiOutlineClose w={3} h={3} />
+							) : (
+								<RxHamburgerMenu w={5} h={5} />
+							)
+						}
+						variant={"ghost"}
+						aria-label={"Toggle Navigation"}
+					/>
+				</Flex>
+				<Flex
+					flex={{ base: 1 }}
+					justify={{ base: "center", md: "space-between" }}
+				>
+					<Box
+						textAlign={useBreakpointValue({
+							base: "center",
+							md: "left",
+						})}
+						fontFamily={"heading"}
+						color={useColorModeValue("gray.800", "white")}
+						fontWeight={"700"}
+						fontSize={"20px"}
+					>
+						<Link href="/">
+							<Image src="/logo.png" height="30" width="40" />
+						</Link>
+					</Box>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
-          </Flex>
-        </Flex>
-      </Flex>
+					<Flex display={{ base: "none", md: "flex" }} ml={10}>
+						<DesktopNav />
+					</Flex>
+				</Flex>
+			</Flex>
 
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
-    </Box>
-  );
+			<Collapse in={isOpen} animateOpacity>
+				<MobileNav />
+			</Collapse>
+		</Box>
+	);
 }
 
 const DesktopNav = () => {
