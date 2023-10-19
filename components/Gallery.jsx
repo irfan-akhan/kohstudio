@@ -20,7 +20,7 @@ export default function ImageGrid() {
 					bg="tomato"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
-					background="url(https://studiolotus.in/uploads/SPIN/projects/115/B-960-X-720.jpg?7162)"
+					// background="url(https://studiolotus.in/uploads/SPIN/projects/115/B-960-X-720.jpg?7162)"
 				/>
 				<GridItem
 					colSpan={2}
@@ -28,7 +28,7 @@ export default function ImageGrid() {
 					bg="papayawhip"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
-					background="url(https://www.abaxial.org/wp-content/uploads/2017/05/parker_legris_img2.jpg)"
+					// background="url(https://www.abaxial.org/wp-content/uploads/2017/05/parker_legris_img2.jpg)"
 				/>
 				<GridItem
 					colSpan={2}
@@ -36,7 +36,7 @@ export default function ImageGrid() {
 					bg="papayawhip"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
-					background="url(/townsquare.jpg)"
+					// background="url(/townsquare.jpg)"
 				/>
 				<GridItem
 					colSpan={6}
@@ -45,7 +45,7 @@ export default function ImageGrid() {
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
 					// background="url(https://studiolotus.in/uploads/SPIN/projects/115/C-1920-X-1080.jpg?2180)"
-					background="url(/khimber.jpg)"
+					// background="url(/khimber.jpg)"
 				/>
 				<GridItem
 					rowSpan={2}
@@ -70,7 +70,7 @@ export default function ImageGrid() {
 					bg="tomato"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
-					background="url(https://studiolotus.in/uploads/SPIN/projects/158/Earth-and-Glass-House-2.jpg?6802)"
+					// background="url(https://studiolotus.in/uploads/SPIN/projects/158/Earth-and-Glass-House-2.jpg?6802)"
 				/>
 				<GridItem
 					colSpan={2}
@@ -78,7 +78,7 @@ export default function ImageGrid() {
 					bg="tomato"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
-					background="url(https://studiolotus.in/uploads/SPIN/projects/158/Earth-and-Glass-House-4.jpg?9333)"
+					// background="url(https://studiolotus.in/uploads/SPIN/projects/158/Earth-and-Glass-House-4.jpg?9333)"
 				/>
 			</Grid>
 			<Text
