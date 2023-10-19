@@ -94,17 +94,15 @@ export default function ExpertiseCard({ order, heading, text }) {
 				marginTop={{ base: "3", sm: "0" }}
 			>
 				<BlogTags tags={["Engineering", heading]} />
-				<Heading marginTop="1">
-					<Text
-						textTransform={"capitalize"}
-						textDecoration="none"
-						_hover={{ textDecoration: "none" }}
-					>
-						{heading}
-					</Text>
+				<Heading
+					marginTop="1"
+					textTransform={"capitalize"}
+					textDecoration="none"
+					_hover={{ textDecoration: "none" }}
+				>
+					{heading}
 				</Heading>
 				<Text
-					as="p"
 					marginTop="2"
 					color={useColorModeValue("gray.700", "gray.200")}
 					fontSize="lg"
