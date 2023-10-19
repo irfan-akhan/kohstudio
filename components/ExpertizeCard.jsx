@@ -21,7 +21,7 @@ const BlogTags = (props) => {
 						textTransform="capitalize"
 						size={"md"}
 						variant="solid"
-						colorScheme="orange"
+						bgColor="#000"
 						key={tag}
 					>
 						{tag}
@@ -35,7 +35,7 @@ export default function ExpertiseCard({ order, heading, text }) {
 	return (
 		<Flex
 			_hover={{
-				bgColor: order ? "#eccc68" : "#eba102",
+				bgColor: "#d7d7d7",
 				transition: "all 1s ease",
 			}}
 			marginTop={{ base: "1", sm: "5" }}
@@ -95,9 +95,11 @@ export default function ExpertiseCard({ order, heading, text }) {
 			>
 				<BlogTags tags={["Engineering", heading]} />
 				<Heading
-					marginTop="1"
-					textTransform={"capitalize"}
+					marginTop="4"
+					textTransform={"uppercase"}
 					textDecoration="none"
+					fontWeight="400"
+					letterSpacing="-0.5px"
 					_hover={{ textDecoration: "none" }}
 				>
 					{heading}
