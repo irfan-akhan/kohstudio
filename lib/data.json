@@ -1,0 +1,72 @@
+{
+	"residentail": [
+		{
+			"id": 1,
+			"Typology": "residentail",
+			"name": "this is the title of the project",
+			"description": "this is the description of the project with all details",
+			"banner": "/id/bannerUrl",
+			"images": [
+				{ "drawings": ["imageUrl", "imageUrl"] },
+				{ "renderings": ["imageUrl", "imageUrl"] },
+				{ "location": ["imageUrl", "imageUrl"] }
+			],
+			"meta": [
+				{
+					"budget": " 200k",
+					"startDate": "20-05-2022",
+					"endDate": "20-05-2022",
+					"client": "client name",
+					"area": "2400 ft",
+					"location": "location of project"
+				}
+			]
+		}
+	],
+	"commercial": [
+		{
+			"id": 2,
+			"Typology": "commercial",
+			"name": "this is the title of the project",
+			"description": "this is the description of the project with all details",
+			"banner": "/id/bannerUrl",
+			"images": [
+				{ "drawings": ["imageUrl", "imageUrl"] },
+				{ "renderings": ["imageUrl", "imageUrl"] },
+				{ "location": ["imageUrl", "imageUrl"] }
+			],
+			"meta": [
+				{
+					"budget": " 200k",
+					"startDate": "20-05-2022",
+					"endDate": "20-05-2022",
+					"client": "client name",
+					"area": "2400 ft",
+					"location": "location of project"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"Typology": "commercial",
+			"name": "this is the title of the project",
+			"description": "this is the description of the project with all details",
+			"banner": "/id/bannerUrl",
+			"images": [
+				{ "drawings": ["imageUrl", "imageUrl"] },
+				{ "renderings": ["imageUrl", "imageUrl"] },
+				{ "location": ["imageUrl", "imageUrl"] }
+			],
+			"meta": [
+				{
+					"budget": " 200k",
+					"startDate": "15-12-2020",
+					"endDate": "01-05-2023",
+					"client": "client name",
+					"area": "2400 ft",
+					"location": "location of project"
+				}
+			]
+		}
+	]
+}

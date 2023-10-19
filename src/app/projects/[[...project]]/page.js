@@ -1,3 +1,4 @@
+'use client';
 import {
   Box,
   Breadcrumb,
@@ -13,6 +14,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
 import {BsArrowRight, BsArrowLeft} from "react-icons/bs";
+import data from "../../../../lib/data.json";
+import { useEffect } from "react";
 
 const labelStyle = {
   textTransform: "capitalize",
@@ -28,9 +31,12 @@ const ValueStyle = {
 };
 
 function Project() {
-  return (
+    {data['commercial'].map((proj) => {
+      console.log(proj, "data") 
+    })}
+    return (
     <Container mt={"8rem"} maxW={"80rem"} height={"550vh"}>
-      <Breadcrumb
+     <Breadcrumb
         spacing="8px"
         separator={<BiChevronRight color="gray.500" />}
         display={"grid"}
@@ -56,7 +62,7 @@ function Project() {
       </Breadcrumb>
       <Heading
         mt={"6rem"}
-        fontSize={"70px"}
+        fontSize={"60px"}
         fontWeight={"300"}
         textAlign={"center"}
         letterSpacing={"4px"}
