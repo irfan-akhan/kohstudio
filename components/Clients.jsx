@@ -5,7 +5,7 @@ import image from "../public/google.png";
 
 export default function Clients() {
 	return (
-		<Container maxW={"55rem"} my={20}>
+		<Container maxW={"55rem"} my={20} fontWeight="medium">
 			<Heading my={20} textAlign={"center"} textTransform="uppercase">
 				Our Clients
 			</Heading>
@@ -22,7 +22,7 @@ export default function Clients() {
 						width={100}
 						height={100}
 					/>
-					<Text mt="3">CIE</Text>
+					<Text mt="3">Cottage Industries Exposition</Text>
 				</Flex>
 				<Flex direction="column" align="center">
 					<Image
