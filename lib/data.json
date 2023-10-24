@@ -2,7 +2,7 @@
 	"residentail": [
 		{
 			"id": 1,
-			"Typology": "residentail",
+			"typology": "residentail",
 			"name": "this is the title of the project",
 			"description": "this is the description of the project with all details",
 			"banner": "/id/bannerUrl",
@@ -26,7 +26,7 @@
 	"commercial": [
 		{
 			"id": 2,
-			"Typology": "commercial",
+			"typology": "commercial",
 			"name": "this is the title of the project",
 			"description": "this is the description of the project with all details",
 			"banner": "/id/bannerUrl",
@@ -47,8 +47,8 @@
 			]
 		},
 		{
-			"id": 2,
-			"Typology": "commercial",
+			"id": 3,
+			"typology": "commercial",
 			"name": "this is the title of the project",
 			"description": "this is the description of the project with all details",
 			"banner": "/id/bannerUrl",
