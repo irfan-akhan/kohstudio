@@ -24,12 +24,14 @@ const labelStyle = {
 	fontSize: "md",
 	fontWeight: 300,
 	marginBottom: "12px",
+	fontSize:"18px",
 };
 const ValueStyle = {
 	textTransform: "capitalize",
 	fontSize: "large",
-	fontWeight: 500,
+	fontWeight: 300,
 	marginBottom: "12px",
+	fontSize:"18px",
 };
 
 function Project() {
@@ -37,13 +39,9 @@ function Project() {
 	const router = useRouter();
 	const { project } = params;
 	const projectDetail = Object.values(data)?.flatMap((detail) => detail);
-	console.log("projects", project);
 	const projectInfo = projectDetail.find(({ id }) => id == project);
-	console.log(projectInfo?.name, "project id");
 	const onClickHandler = (e) => {
-		console.log("e", e);
 		let id = project;
-		console.log("e", e.target.name);
 		e.target.name == "next" ? id++ : id--;
 		router.push(`/projects/category/${id}`);
 	};
@@ -69,7 +67,7 @@ function Project() {
 
 				<BreadcrumbItem isCurrentPage>
 					<BreadcrumbLink>
-						<Link href="/">{projectInfo?.typology}</Link>
+						<Link href="/">{projectInfo?.typology.charAt(0).toUpperCase() + projectInfo?.typology.slice(1)}</Link>
 					</BreadcrumbLink>
 				</BreadcrumbItem>
 			</Breadcrumb>
@@ -86,7 +84,7 @@ function Project() {
 			<Flex gap={10} direction={{ base: "column", md: "initial" }}>
 				<Box
 					borderRight={"1px solid #030303"}
-					borderRightWidth="medium"
+					borderRightWidth="small"
 					pr="3"
 				>
 					<Image
