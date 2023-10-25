@@ -11,16 +11,13 @@
 				{ "renderings": ["imageUrl", "imageUrl"] },
 				{ "location": ["imageUrl", "imageUrl"] }
 			],
-			"meta": [
-				{
-					"budget": " 200k",
-					"startDate": "20-05-2022",
-					"endDate": "20-05-2022",
-					"client": "client name",
-					"area": "2400 ft",
-					"location": "location of project"
-				}
-			]
+
+			"budget": " 200k",
+			"startDate": "20-05-2022",
+			"endDate": "20-05-2022",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "location of project"
 		}
 	],
 	"commercial": [
@@ -35,16 +32,13 @@
 				{ "renderings": ["imageUrl", "imageUrl"] },
 				{ "location": ["imageUrl", "imageUrl"] }
 			],
-			"meta": [
-				{
-					"budget": " 200k",
-					"startDate": "20-05-2022",
-					"endDate": "20-05-2022",
-					"client": "client name",
-					"area": "2400 ft",
-					"location": "location of project"
-				}
-			]
+
+			"budget": " 200k",
+			"startDate": "20-05-2022",
+			"endDate": "20-05-2022",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "location of project"
 		},
 		{
 			"id": 3,
@@ -57,16 +51,13 @@
 				{ "renderings": ["imageUrl", "imageUrl"] },
 				{ "location": ["imageUrl", "imageUrl"] }
 			],
-			"meta": [
-				{
-					"budget": " 200k",
-					"startDate": "15-12-2020",
-					"endDate": "01-05-2023",
-					"client": "client name",
-					"area": "2400 ft",
-					"location": "location of project"
-				}
-			]
+
+			"budget": " 200k",
+			"startDate": "15-12-2020",
+			"endDate": "01-05-2023",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "location of project"
 		}
 	]
 }
