@@ -10,7 +10,6 @@ import {
 	Heading,
 	Text,
 	VStack,
-	useColorModeValue,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,6 +37,7 @@ function Project() {
 	const params = useParams();
 	const router = useRouter();
 	const { project } = params;
+	console.log(params, "params");
 	const projectDetail = Object.values(data)?.flatMap((detail) => detail);
 	const projectInfo = projectDetail.find(({ id }) => id == project);
 	const onClickHandler = (e) => {

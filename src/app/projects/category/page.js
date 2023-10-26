@@ -1,5 +1,5 @@
 "use client";
-import { Button, Container, Flex, Heading } from "@chakra-ui/react";
+import { Container, Flex, Heading } from "@chakra-ui/react";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import styles from "../../../../styles/project.module.css";
@@ -8,13 +8,12 @@ import data from "../../../../lib/data.json";
 import { useRouter } from "next/navigation";
 
 export default function page() {
-  const router = useRouter();
-  const projects = Object?.values(data)?.flatMap((item) => item);
-  console.log("first item", projects);
-  return (
+	const router = useRouter();
+	const projects = Object?.values(data)?.flatMap((item) => item);
+	return (
 		<Container my={"9rem"} maxW={"70rem"}>
 			<Heading textAlign={"center"} my={10}>
-				Category
+				{`Category ${projects?.typology || ""} `}
 			</Heading>
 			<Flex flexWrap={"wrap"} gap={20}>
 				{projects?.map((item, index) => (
@@ -22,12 +21,10 @@ export default function page() {
 						key={index}
 						className={styles.card}
 						style={{
-							backgroundImage: `url(${item.banner})`,
-							backgroundSize: "cover",
-							objectFit: "cover",
+							backgroundImage:
+								"url(https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXJjaGl0ZWN0dXJlfGVufDB8fDB8fHww&w=1000&q=80)",
 						}}
 						onClick={() => {
-							// router.push(`/projects/category/${item?.id}`);
 							router.push(`/projects/category/${item?.id}`);
 						}}
 					>
@@ -57,5 +54,5 @@ export default function page() {
 				))}
 			</Flex>
 		</Container>
-  );
+	);
 }
