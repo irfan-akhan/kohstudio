@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { FiInstagram } from "react-icons/fi";
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
+import Link from "next/link";
 
 const ListHeader = ({ children }) => {
 	return (
@@ -99,13 +100,31 @@ export default function Footer() {
 					<Stack align={"flex-start"}>
 						<ListHeader>Follow Us</ListHeader>
 						<Flex align="center" as="a" href={"#"}>
-							<BsFacebook color="blue" /> &nbsp; Facebook
+							<BsFacebook color="blue" />
+							<Link
+								href="https://www.instagram.com/koharchitects"
+								target="_blank"
+							>
+								&nbsp; Facebook
+							</Link>
 						</Flex>
-						<Flex align="center" as="a" href={"#"}>
-							<FiInstagram color="red" /> &nbsp; Instagram
+						<Flex align="center">
+							<FiInstagram color="red" />
+							<Link
+								href="https://www.instagram.com/koharchitects"
+								target="_blank"
+							>
+								&nbsp; Instagram
+							</Link>
 						</Flex>
-						<Flex align="center" as="a" href={"#"}>
-							<BsLinkedin color="teal" /> &nbsp; LinkedIn
+						<Flex align="center">
+							<BsLinkedin color="teal" />
+							<Link
+								referrerPolicy="no-referrer"
+								href="https://www.instagram.com/koharchitects"
+								target="_blank"
+							></Link>
+							&nbsp; LinkedIn
 						</Flex>
 					</Stack>
 				</SimpleGrid>

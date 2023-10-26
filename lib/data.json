@@ -1,11 +1,11 @@
 {
-	"residentail": [
+	"residential": [
 		{
 			"id": 1,
-			"typology": "residentail",
+			"typology": "residential",
 			"name": "this is the title of the project",
 			"description": "this is the description of the project with all details",
-			"banner": "/id/bannerUrl",
+			"banner": "/projects/commercial/agasyedmurtaza/banner.jpg",
 			"images": [
 				{ "drawings": ["imageUrl", "imageUrl"] },
 				{ "renderings": ["imageUrl", "imageUrl"] },
@@ -26,7 +26,7 @@
 			"typology": "commercial",
 			"name": "this is the title of the project",
 			"description": "this is the description of the project with all details",
-			"banner": "/id/bannerUrl",
+			"banner": "/projects/commercial/agasyedmurtaza/banner.jpg",
 			"images": [
 				{ "drawings": ["imageUrl", "imageUrl"] },
 				{ "renderings": ["imageUrl", "imageUrl"] },
@@ -43,9 +43,9 @@
 		{
 			"id": 3,
 			"typology": "commercial",
-			"name": "this is the title of the project",
+			"name": "aga syed murtaza",
 			"description": "this is the description of the project with all details",
-			"banner": "/id/bannerUrl",
+			"banner": "/projects/commercial/agasyedmurtaza/banner.jpg",
 			"images": [
 				{ "drawings": ["imageUrl", "imageUrl"] },
 				{ "renderings": ["imageUrl", "imageUrl"] },
