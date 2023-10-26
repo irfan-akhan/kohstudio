@@ -130,7 +130,7 @@ export default function ExpertiseCard({
 						fontWeight={"light"}
 						width={{ base: "50%" }}
 						onClick={() => {
-							router.push(`/wok/${heading.toLowerCase()}`);
+							router.push(`/work/${heading.toLowerCase()}`);
 						}}
 						_hover={{ bg: "black.500" }}
 					>

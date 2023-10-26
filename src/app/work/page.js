@@ -14,7 +14,7 @@ export default function page() {
 	return (
 		<Container my={"9rem"} maxW={"70rem"}>
 			<Heading textAlign={"center"} my={10}>
-				Category
+				WORK
 			</Heading>
 			<Flex flexWrap={"wrap"} gap={20}>
 				{projects?.map((item, index) => (
@@ -27,8 +27,7 @@ export default function page() {
 							objectFit: "cover",
 						}}
 						onClick={() => {
-							// router.push(`/projects/category/${item?.id}`);
-							router.push(`/wok/${item.typology}/${item?.id}`);
+							router.push(`/work/${item.typology}/${item?.id}`);
 						}}
 					>
 						<div className={styles.card__content}>

@@ -7,15 +7,15 @@ import Image from "next/image";
 import data from "../../../../lib/data.json";
 import { useRouter, useParams } from "next/navigation";
 
-export default function Category() {
+export default function page() {
 	const { category } = useParams();
 	const router = useRouter();
 	const projects = data[category];
 	console.log("first params", category);
 	return (
 		<Container my={"9rem"} maxW={"70rem"}>
-			<Heading textAlign={"center"} my={10}>
-				Category
+			<Heading textAlign={"center"} my={10} textTransform='uppercase'>
+				{category}
 			</Heading>
 			<Flex flexWrap={"wrap"} gap={20}>
 				{projects?.map((item, index) => (
@@ -28,8 +28,7 @@ export default function Category() {
 							objectFit: "cover",
 						}}
 						onClick={() => {
-							// router.push(`/projects/category/${item?.id}`);
-							router.push(`/wok/${item.typology}/${item?.id}`);
+							router.push(`/work/${item.typology}/${item?.id}`);
 						}}
 					>
 						<div className={styles.card__content}>
