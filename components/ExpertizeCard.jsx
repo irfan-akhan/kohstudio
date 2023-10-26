@@ -2,6 +2,7 @@
 
 import {
 	Box,
+	Button,
 	Flex,
 	HStack,
 	Heading,
@@ -10,6 +11,7 @@ import {
 	Text,
 	useColorModeValue,
 } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
 const BlogTags = (props) => {
 	const { marginTop = 0, tags } = props;
 
@@ -31,7 +33,13 @@ const BlogTags = (props) => {
 		</HStack>
 	);
 };
-export default function ExpertiseCard({ order, heading, text }) {
+export default function ExpertiseCard({
+	order,
+	heading,
+	text,
+	showLinkButton = true,
+}) {
+	const router = useRouter();
 	return (
 		<Flex
 			_hover={{
@@ -113,6 +121,22 @@ export default function ExpertiseCard({ order, heading, text }) {
 						? text
 						: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry &apos;s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book."}
 				</Text>
+				{showLinkButton && (
+					<Button
+						size="md"
+						my="5"
+						color="#fff"
+						bg="#000"
+						fontWeight={"light"}
+						width={{ base: "50%" }}
+						onClick={() => {
+							router.push(`/wok/${heading.toLowerCase()}`);
+						}}
+						_hover={{ bg: "black.500" }}
+					>
+						View Projects
+					</Button>
+				)}
 			</Box>
 		</Flex>
 	);
