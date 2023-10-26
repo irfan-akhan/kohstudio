@@ -1,12 +1,8 @@
+"use client"
 import { Container, Grid, GridItem, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import {BsArrowRight} from "react-icons/bs"
-import Image1 from "../public/gallery/cie2.jpg"
-import Image2 from "../public/gallery/Drawing1.jpg"
-import Image3 from "../public/gallery/Drawing2.jpg"
-import Image4 from "../public/gallery/Drawing3.jpg"
-import Image5 from "../public/gallery/townsquare.jpg"
 
 
 export default function ImageGrid() {
@@ -85,7 +81,7 @@ export default function ImageGrid() {
 				alignItems={"center"}
 				gap={3}
 			>
-				<Link href="/">View All Projects</Link>
+				<Link href="/work">View All Projects</Link>
 				<BsArrowRight />
 			</Text>
 		</Container>

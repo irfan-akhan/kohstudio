@@ -1,10 +1,10 @@
 "use client";
-import { Container, Flex, Heading } from "@chakra-ui/react";
+import { Button, Container, Flex, Heading } from "@chakra-ui/react";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
-import styles from "../../../../styles/project.module.css";
+import styles from "../../../styles/project.module.css";
 import Image from "next/image";
-import data from "../../../../lib/data.json";
+import data from "../../../lib/data.json";
 import { useRouter } from "next/navigation";
 
 export default function page() {
@@ -12,8 +12,8 @@ export default function page() {
   const projects = Object?.values(data)?.flatMap((item) => item);
   return (
     <Container my={"9rem"} maxW={"70rem"}>
-      <Heading textAlign={"center"} my={10}>
-      { `Category ${projects?.typology || ""} `}
+      <Heading textAlign={"center"} my={16}>
+      Work
       </Heading>
       <Flex flexWrap={"wrap"} gap={20}>
         {projects?.map((item, index) => (
