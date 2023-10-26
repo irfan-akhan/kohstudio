@@ -2,10 +2,10 @@
 import { Container, Flex, Heading } from "@chakra-ui/react";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
-import styles from "../../../../styles/project.module.css";
 import Image from "next/image";
 import data from "../../../../lib/data.json";
 import { useRouter } from "next/navigation";
+import styles from "../../../../styles/project.module.css";
 
 export default function page() {
   const router = useRouter();
