@@ -77,7 +77,8 @@ function TestimonialCard(props) {
       maxW={"70rem"}
       direction={{ base: "column-reverse", md: "row" }}
       width={"full"}
-      p={10}
+      p={{ base:4, xl:10}}
+      alignItems={"center"}
       justifyContent={"space-between"}
       position={"relative"}
       bg={useColorModeValue("white", "gray.800")}
@@ -91,7 +92,8 @@ function TestimonialCard(props) {
           fontWeight={"light"}
           fontSize={"14px"}
           pb={4}
-          maxW={"40rem"}
+          maxW={{base:"100%", xl:"40rem"}}
+          textAlign={"justify"}
         >
           {content}
         </chakra.p>
@@ -106,6 +108,7 @@ function TestimonialCard(props) {
           </chakra.span>
         </chakra.p>
       </Flex>
+      <Box mb={{base:5}}>
       <Image
         src={avatar}
         height={250}
@@ -113,6 +116,7 @@ function TestimonialCard(props) {
         style={{borderRadius:"50%", overflow: "hidden"}}
         m={{ base: "0 0 35px 0", md: "0 0 0 50px" }}
       />
+      </Box>
     </Flex>
   );
 }
