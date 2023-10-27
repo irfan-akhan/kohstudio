@@ -21,6 +21,23 @@ const testimonials = [
     avatar: "/team/danish.jpg",
   },
   {
+    name: "Abrar Ahmad",
+    role: "Project Manager",
+    content: `Abrar Ahmad is a dedicated and accomplished professional with a strong background in civil engineering and project management. With a passion for shaping the built environment, Ahmad has made significant contributions to the field through his expertise and leadership skills.
+      As a Project Manager at Koh Studio, Ahmad has played a pivotal role in the successful execution of various projects. His meticulous planning, attention to detail, and ability to navigate through intricate project requirements have earned him recognition among clients and peers alike. Under his guidance, projects have not only been completed efficiently but have also consistently exceeded expectations
+      Furthermore, Ahmad holds the esteemed title of being a founding member of Koh Studio, showcasing his entrepreneurial spirit and innovative mindset. His vision and determination have been instrumental in shaping the studio's identity and establishing its reputation as a leading force in the field of civil engineering and architectural design.`,
+    avatar: "/team/abrar.jpg",
+  },
+  {
+    name: "Lokesh Khati",
+    role: "Architect",
+    content: `Lokesh stands as a revered figure within Koh Studio, where he serves as a Senior Architect known for his exceptional expertise in construction and master planning. With a wealth of experience and a deep passion for architectural innovation, Lokesh has become a driving force behind some of the studio's most remarkable and visionary projects.
+    Lokesh's journey in the architectural world began with a profound fascination for shaping spaces that harmonize seamlessly with the environment and cater to the needs of the community. Armed with a solid educational background and an insatiable curiosity, he quickly ascended through the ranks, earning a reputation for his keen eye for detail and his ability to transform concepts into tangible, awe-inspiring structures.
+    `,
+    avatar:
+      "/team/vikas.jpg",
+  },
+  {
     name: "Hakim Saqib",
     role: "Site Engineer",
     content: `Saqib is a highly skilled and dedicated professional with a strong background in construction and project management. With a wealth of knowledge in execution and site management, Saqib has proven himself to be an invaluable asset in the field. His expertise and hands-on experience make him a key player in Koh Studio, a renowned construction and design firm.
@@ -34,14 +51,7 @@ const testimonials = [
       Zubair possesses an extraordinary talent for 3D modelling and visualization, transforming abstract ideas and blueprints into stunning, lifelike visual representations. His mastery of advanced software tools allows him to create intricate, detailed models that breathe life into architectural concepts. Whether it's a futuristic skyscraper, a sustainable residential complex, or a culturally rich heritage site, Zubair's 3D models are characterized by their precision, realism, and attention to every minute detail.`,
     avatar: "/team/zubair.jpg",
   },
-  {
-    name: "Abrar Ahmad",
-    role: "Project Manager",
-    content: `Abrar Ahmad is a dedicated and accomplished professional with a strong background in civil engineering and project management. With a passion for shaping the built environment, Ahmad has made significant contributions to the field through his expertise and leadership skills.
-      As a Project Manager at Koh Studio, Ahmad has played a pivotal role in the successful execution of various projects. His meticulous planning, attention to detail, and ability to navigate through intricate project requirements have earned him recognition among clients and peers alike. Under his guidance, projects have not only been completed efficiently but have also consistently exceeded expectations
-      Furthermore, Ahmad holds the esteemed title of being a founding member of Koh Studio, showcasing his entrepreneurial spirit and innovative mindset. His vision and determination have been instrumental in shaping the studio's identity and establishing its reputation as a leading force in the field of civil engineering and architectural design.`,
-    avatar: "/team/abrar.jpg",
-  },
+  
   {
     name: "Vikas",
     role: "Architect",
@@ -50,6 +60,7 @@ const testimonials = [
     avatar:
       "/team/vikas.jpg",
   },
+ 
   {
     name: "Rakib Abbas",
     role: "IT Manager",
