@@ -126,7 +126,7 @@ const ProjectDetails = () => {
           />
         </Box>
       </Flex>
-      <VStack my="10">
+      {/* <VStack my="10">
         <Image
           src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
           alt={projectInfo.name}
@@ -149,7 +149,7 @@ const ProjectDetails = () => {
             objectFit: "cover",
           }}
         />
-      </VStack>
+      </VStack> */}
       <Flex
         direction={{ base: "column", md: "initial" }}
         justify="space-between"
@@ -189,7 +189,7 @@ const ProjectDetails = () => {
           height={700}
         />
       </Flex>
-      <Image
+      {/* <Image
         src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
         alt={projectInfo.name}
         width={500}
@@ -200,7 +200,7 @@ const ProjectDetails = () => {
           objectFit: "cover",
           marginTop: { base: "2rem", md: "7rem" },
         }}
-      />
+      /> */}
       <Flex
         textAlign={"center"}
         my={{ base: 10, md: 20 }}

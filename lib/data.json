@@ -5,7 +5,7 @@
 			"typology": "residential",
 			"name": "this is the title of the project",
 			"description": "this is the description of the project with all details",
-			"banner": "/projects/commercial/agasyedmurtaza/banner.jpg",
+			"banner": "/projects/commercial/budgamComplex/image1.jpg",
 			"images": [
 				{ "drawings": ["imageUrl", "imageUrl"] },
 				{ "renderings": ["imageUrl", "imageUrl"] },
@@ -26,7 +26,7 @@
 			"typology": "commercial",
 			"name": "this is the title of the project",
 			"description": "this is the description of the project with all details",
-			"banner": "/projects/commercial/agasyedmurtaza/banner.jpg",
+			"banner": "/projects/commercial/budgamComplex/image1.jpg",
 			"images": [
 				{ "drawings": ["imageUrl", "imageUrl"] },
 				{ "renderings": ["imageUrl", "imageUrl"] },
@@ -45,7 +45,7 @@
 			"typology": "commercial",
 			"name": "aga syed murtaza",
 			"description": "this is the description of the project with all details",
-			"banner": "/projects/commercial/agasyedmurtaza/banner.jpg",
+			"banner": "/projects/commercial/budgamComplex/image1.jpg",
 			"images": [
 				{ "drawings": ["imageUrl", "imageUrl"] },
 				{ "renderings": ["imageUrl", "imageUrl"] },

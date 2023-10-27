@@ -22,7 +22,7 @@ export default function page() {
 						key={index}
 						className={styles.card}
 						style={{
-							backgroundImage: `url(${item.banner})`,
+							backgroundImage: `url(${item?.banner})`,
 							backgroundSize: "cover",
 							objectFit: "cover",
 						}}

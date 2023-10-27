@@ -129,12 +129,13 @@ export default function ExpertiseCard({
 						bg="#000"
 						fontWeight={"light"}
 						width={{ base: "50%" }}
+						width={"8rem"}
 						onClick={() => {
 							router.push(`/work/${heading.toLowerCase()}`);
 						}}
 						_hover={{ bg: "black.500" }}
 					>
-						View Projects
+						View
 					</Button>
 				)}
 			</Box>
