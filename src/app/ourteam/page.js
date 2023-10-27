@@ -1,9 +1,11 @@
 "use client";
 
 import {
+  Box,
   chakra,
   Container,
   Flex,
+  Heading,
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
@@ -43,10 +45,10 @@ const testimonials = [
   {
     name: "Vikas",
     role: "Architect",
-    content: ` Vikas is a dynamic and innovative young architect, whose passion for design and expertise in construction detailing have made a significant mark in the architectural industry. With a keen eye for detail and a creative mind, Vikas has become a prominent figure in the field, renowned for his exceptional skills in crafting intricate and well-thought-out architectural designs.
+    content: ` Vikas is a dynamic and innovative young architect, whose passion for design and expertise in construction detailing have made a significant mark in the architectural industry. With a keen eye for detail and a creative mind, Vikas has become a prominent figure in the field, renowned for his exceptional skills in crafting intricate and well-thought-out architectural designs.{" "}
     Vikas's portfolio boasts a diverse range of projects, each reflecting his unique design sensibilities and commitment to quality. Whether it's a modern urban residence, a commercial complex, or a public institution, Vikas infuses his designs with creativity and practicality, ensuring that they not only captivate the eye but also serve the needs of the occupants seamlessly.`,
     avatar:
-      "https://images.unsplash.com/photo-1606513542745-97629752a13b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "/team/vikas.jpg",
   },
   {
     name: "Rakib Abbas",
@@ -61,7 +63,7 @@ function TestimonialCard(props) {
   const { name, role, content, avatar, index } = props;
   return (
     <Flex
-      w={"85rem"}
+      maxW={"70rem"}
       direction={{ base: "column-reverse", md: "row" }}
       width={"full"}
       p={10}
@@ -75,19 +77,17 @@ function TestimonialCard(props) {
         justifyContent={"space-between"}
       >
         <chakra.p
-          fontFamily={"Inter"}
-          fontWeight={"medium"}
-          fontSize={"15px"}
+          fontWeight={"light"}
+          fontSize={"14px"}
           pb={4}
           maxW={"40rem"}
         >
           {content}
         </chakra.p>
-        <chakra.p fontFamily={"Work Sans"} fontWeight={"bold"} fontSize={14}>
+        <chakra.p fontWeight={"bold"} fontSize={14}>
           {name}
           <chakra.span
-            fontFamily={"Inter"}
-            fontWeight={"medium"}
+            fontWeight={"light"}
             color={"gray.500"}
           >
             {" "}
@@ -97,10 +97,9 @@ function TestimonialCard(props) {
       </Flex>
       <Image
         src={avatar}
-        height={200}
-        width={200}
-        alignSelf={"center"}
-        style={{borderRadius:"50%"}}
+        height={250}
+        width={250}
+        style={{borderRadius:"50%", overflow: "hidden"}}
         m={{ base: "0 0 35px 0", md: "0 0 0 50px" }}
       />
     </Flex>
@@ -109,14 +108,15 @@ function TestimonialCard(props) {
 
 export default function GridBlurredBackdrop() {
   return (
-    <VStack
+    <Container
       textAlign={"center"}
       pt={10}
       justifyContent={"center"}
       direction={"column"}
-      width={"full"}
+      maxW={"75rem"}
       overflow={"hidden"}
     >
+      <Heading fontSize={"3xl"} mt={20}>Our Team</Heading>
       <VStack
         columns={{ base: 1, xl: 2 }}
         spacing={"20"}
@@ -128,6 +128,6 @@ export default function GridBlurredBackdrop() {
           <TestimonialCard key={index} {...cardInfo} index={index} />
         ))}
       </VStack>
-    </VStack>
+    </Container>
   );
 }
