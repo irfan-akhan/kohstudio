@@ -33,7 +33,7 @@ export default function WithSubnavigation() {
 				color={useColorModeValue("gray.600", "white")}
 				minH={"80px"}
 				py={{ base: 2 }}
-				px={{ base: 10 }}
+				px={{ base: 5 }}
 				borderBottom={1}
 				borderStyle={"solid"}
 				borderColor={useColorModeValue("gray.200", "gray.900")}
