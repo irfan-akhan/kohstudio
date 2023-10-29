@@ -66,13 +66,15 @@ export default function WithSubnavigation() {
 							base: "center",
 							md: "left",
 						})}
+            marginLeft={16}
 						fontFamily={"heading"}
 						color={useColorModeValue("gray.800", "white")}
 						fontWeight={"700"}
 						fontSize={"20px"}
 					>
 						<Link href="/">
-							<Image src="/logo.png" height="30" width="40" />
+							{/* <Image src="/logo.png" height="30" width="40" /> */}
+              KOH
 						</Link>
 					</Box>
 
