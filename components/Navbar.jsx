@@ -19,8 +19,7 @@ import {
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
-import { AiOutlineArrowDown } from "react-icons/ai";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -190,7 +189,9 @@ const MobileNavItem = ({ label, children, href }) => {
       <Box
         py={2}
         as="a"
-        justifyContent="space-between"
+        justifyContent="flex-start"
+        gap={2}
+        display={"flex"}
         alignItems="center"
         _hover={{
           textDecoration: "none",
@@ -201,7 +202,7 @@ const MobileNavItem = ({ label, children, href }) => {
         </Box>
         {children && (
           <Icon
-            as={AiOutlineArrowDown}
+            as={MdOutlineKeyboardArrowDown}
             transition={"all .25s ease-in-out"}
             transform={isOpen ? "rotate(180deg)" : ""}
             w={6}
@@ -233,93 +234,93 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: "architecture",
+    label: "Architecture",
     children: [
       {
-        label: "hospitality",
+        label: "Hospitality",
         href: "/projects",
       },
       {
-        label: "residential",
+        label: "Residential",
         href: "#",
       },
       {
-        label: "commercial",
+        label: "Commercial",
         href: "#",
       },
     ],
   },
   {
-    label: "interior",
+    label: "Interior",
     children: [
       {
-        label: "hotels",
+        label: "Hotels",
         
         href: "#",
       },
       {
-        label: "homes",
+        label: "Homes",
         href: "#",
       },
       {
-        label: "workplace",
+        label: "Workplace",
         href: "#",
       },
     ],
   },
   {
-    label: "landscape",
+    label: "Landscape",
     href: "/contact",
   },
   {
-    label: "urban design",
+    label: "Urban Design",
     href: "/contact",
   },
 
   {
-    label: "exhibition",
+    label: "Exhibition",
     href: "/contact",
   },
   {
-    label: "product design",
+    label: "Product Design",
     href: "/contact",
   },
   {
-    label: "international",
+    label: "International",
     children: [
       {
-        label: "architecture",
+        label: "Architecture",
         href: "/aboutus",
       },
       {
-        label: "interior",
+        label: "Interior",
         href: "#",
       },
       {
-        label: "exhibition",
+        label: "Exhibition",
         href: "#",
       },
     ],
   },
   {
-    label: "team",
+    label: "Team",
     href: "/ourteam",
   },
   {
-    label: "about",
+    label: "About",
     children: [
       {
-        label: "offices",
+        label: "Offices",
         href: "/aboutus",
       },
       {
-        label: "carrers",
+        label: "Carrers",
         href: "/careers",
       },
     ],
   },
   {
-    label: "contact",
+    label: "Contact",
     href: "/contact",
   },
 ];
