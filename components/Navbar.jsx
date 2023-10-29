@@ -58,15 +58,15 @@ export default function WithSubnavigation() {
 					/>
 				</Flex>
 				<Flex
-					flex={{ base: 1 }}
-					justify={{ base: "center", md: "space-between" }}
+					// flex={{ base: 1 }}
+					justifyContent={{ base: "space-between", md: "space-between" }}
 				>
 					<Box
 						textAlign={useBreakpointValue({
 							base: "center",
 							md: "left",
 						})}
-            marginLeft={16}
+            // marginLeft={24}
 						fontFamily={"heading"}
 						color={useColorModeValue("gray.800", "white")}
 						fontWeight={"700"}
@@ -97,7 +97,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Stack direction={"row"} spacing={4} alignItems={"center"}>
+    <Stack direction={"row"} spacing={4} alignItems={"center"} marginLeft={"22rem"}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
