@@ -1,20 +1,8 @@
 "use client";
 
 import {
-	Box,
 	Heading,
-	Image,
-	Text,
-	Divider,
-	HStack,
-	Tag,
-	Wrap,
-	WrapItem,
-	SpaceProps,
-	useColorModeValue,
 	Container,
-	VStack,
-	ButtonSpinner,
 } from "@chakra-ui/react";
 import ExpertiseCard from "./ExpertizeCard";
 

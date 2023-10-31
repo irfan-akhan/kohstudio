@@ -3,9 +3,7 @@
 import {
 	Box,
 	Flex,
-	Text,
 	IconButton,
-	Button,
 	Stack,
 	Collapse,
 	Icon,
@@ -21,7 +19,6 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function WithSubnavigation() {
 	const { isOpen, onToggle } = useDisclosure();
@@ -77,7 +74,6 @@ export default function WithSubnavigation() {
 						fontSize={"20px"}
 					>
 						<Link href="/">
-							{/* <Image src="/logo.png" height="30" width="40" /> */}
 							KOH
 						</Link>
 					</Box>

@@ -7,12 +7,9 @@ export default function Home() {
 	return (
 		<main>
 			<HeroBanner />
-			{/* <Why /> */}
 			<Expertise />
-			{/* <Testimonials /> */}
 			<Clients />
 			<Gallery />
-			{/* <Ourteam /> */}
 		</main>
 	);
 }

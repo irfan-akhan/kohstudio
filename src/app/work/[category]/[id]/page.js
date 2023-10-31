@@ -9,7 +9,6 @@ import {
   Flex,
   Heading,
   Text,
-  VStack,
 } from "@chakra-ui/react";
 
 import Image from "next/image";
@@ -189,18 +188,6 @@ const ProjectDetails = () => {
           height={700}
         />
       </Flex>
-      {/* <Image
-        src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
-        alt={projectInfo.name}
-        width={500}
-        height={500}
-        style={{
-          maxHeight: { base: "85vh", md: "95vh" },
-          width: "100%",
-          objectFit: "cover",
-          marginTop: { base: "2rem", md: "7rem" },
-        }}
-      /> */}
       <Flex
         textAlign={"center"}
         my={{ base: 10, md: 20 }}
@@ -215,6 +202,7 @@ const ProjectDetails = () => {
           onClick={onClickHandler}
           name="previous"
           fontWeight="hairline"
+          style={{background:"black", color:"white"}}
         >
           <BsArrowLeft />
           &nbsp; Previous
@@ -224,6 +212,7 @@ const ProjectDetails = () => {
           onClick={onClickHandler}
           name="next"
           fontWeight="hairline"
+          style={{background:"black", color:"white"}}
         >
           Next &nbsp; <BsArrowRight />
         </Button>
