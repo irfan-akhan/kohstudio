@@ -80,6 +80,8 @@ function TestimonialCard(props) {
 			justifyContent={"space-between"}
 			position={"relative"}
 			bg={useColorModeValue("white", "gray.800")}
+			data-aos="fade-up"
+			data-aos-offset="30"
 		>
 			<Flex
 				direction={"column"}
@@ -95,10 +97,18 @@ function TestimonialCard(props) {
 				>
 					{content}
 				</chakra.p>
-				<chakra.p fontWeight={"bold"} fontSize={16}>
+				<chakra.p
+					data-aos-anchor-placement="center-center"
+					fontWeight={"bold"}
+					fontSize={16}
+				>
 					{name}
 				</chakra.p>
-				<chakra.p fontWeight={"light"} fontSize={14}>
+				<chakra.p
+					data-aos-anchor-placement="center-center"
+					fontWeight={"light"}
+					fontSize={14}
+				>
 					{role}
 				</chakra.p>
 			</Flex>

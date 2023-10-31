@@ -6,7 +6,12 @@ import image from "../public/google.png";
 export default function Clients() {
 	return (
 		<Container maxW={"55rem"} my={20} fontWeight="medium">
-			<Heading my={20} textAlign={"center"} textTransform="uppercase">
+			<Heading
+				data-aos="fade-up"
+				my={20}
+				textAlign={"center"}
+				textTransform="uppercase"
+			>
 				Our Clients
 			</Heading>
 			<Flex
@@ -14,6 +19,8 @@ export default function Clients() {
 				gap={"100px"}
 				alignItems={"center"}
 				justifyContent={"center"}
+				data-aos="fade-up"
+				data-aos-delay="50"
 			>
 				<Flex direction="column" align="center">
 					<Image

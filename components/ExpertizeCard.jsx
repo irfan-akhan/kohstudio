@@ -38,10 +38,13 @@ export default function ExpertiseCard({
 	heading,
 	text,
 	showLinkButton = true,
+	animationType,
 }) {
 	const router = useRouter();
 	return (
 		<Flex
+			data-aos={animationType}
+			data-aos-anchor-placement="top-center"
 			_hover={{
 				bgColor: "#d7d7d7",
 				transition: "all 1s ease",
@@ -69,6 +72,8 @@ export default function ExpertiseCard({
 					marginTop="5%"
 				>
 					<Box
+						data-aos={animationType}
+						data-aos-delay="400"
 						textDecoration="none"
 						_hover={{ textDecoration: "none" }}
 					>
@@ -129,7 +134,6 @@ export default function ExpertiseCard({
 						bg="#000"
 						fontWeight={"light"}
 						width={{ base: "50%" }}
-						width={"8rem"}
 						onClick={() => {
 							router.push(`/work/${heading.toLowerCase()}`);
 						}}

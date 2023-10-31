@@ -65,6 +65,7 @@ export default function Contact() {
 			centerContent
 			overflow="hidden"
 			pb="10vh"
+			data-aos="fade-up"
 		>
 			<Flex mt={"30vh"} direction="column" align="center" width="85vw">
 				<Flex direction="column" align="center" m="6" color="white">
@@ -72,13 +73,15 @@ export default function Contact() {
 						contact us
 					</Heading>
 					<Text as="p" fontWeight="medium">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Quod officia, dolor et alias ad ducimus sunt modi
-						doloribus temporibus voluptatum iste commodi laudantium
-						tempora recusandae odit quisquam voluptas. Illum, iusto.
+						{`Let's talk about you project`}
 					</Text>
 				</Flex>
-				<Box bg="#000" width={{ base: "full", md: "70%" }}>
+				<Box
+					bg="#000"
+					width={{ base: "full", md: "70%" }}
+					data-aos="fade-up"
+					data-aos-delay="150"
+				>
 					<Wrap>
 						<WrapItem width={{ base: "full", md: "70%" }}>
 							<Box width="full" bg="white">
@@ -204,45 +207,60 @@ export default function Contact() {
 									mt={{ lg: 5, md: 5 }}
 									alignItems="flex-start"
 								>
-									<IconButton
-										aria-label="facebook"
-										variant="ghost"
-										size="lg"
-										isRound={true}
-										_hover={{ bg: "#0D74FF" }}
-										icon={
-											<MdFacebook
-												size="18px"
-												color="white"
-											/>
-										}
-									/>
-									<IconButton
-										aria-label="github"
-										variant="ghost"
-										size="lg"
-										isRound={true}
-										_hover={{ bg: "#0D74FF" }}
-										icon={
-											<BsLinkedin
-												size="18px"
-												color="white"
-											/>
-										}
-									/>
-									<IconButton
-										aria-label="discord"
-										variant="ghost"
-										size="lg"
-										isRound={true}
-										_hover={{ bg: "#0D74FF" }}
-										icon={
-											<BsInstagram
-												size="18px"
-												color="white"
-											/>
-										}
-									/>
+									<Link
+										href="https://www.instagram.com/koharchitects"
+										target="_blank"
+									>
+										<IconButton
+											aria-label="facebook"
+											variant="ghost"
+											size="lg"
+											isRound={true}
+											_hover={{ bg: "#0D74FF" }}
+											icon={
+												<MdFacebook
+													size="18px"
+													color="white"
+												/>
+											}
+										/>
+									</Link>
+									<Link
+										href="https://www.instagram.com/koharchitects"
+										target="_blank"
+									>
+										<IconButton
+											aria-label="github"
+											variant="ghost"
+											size="lg"
+											isRound={true}
+											_hover={{ bg: "#0D74FF" }}
+											icon={
+												<BsLinkedin
+													size="18px"
+													color="white"
+												/>
+											}
+										/>
+									</Link>
+									<Link
+										href="https://www.instagram.com/koharchitects"
+										target="_blank"
+									>
+										<IconButton
+											aria-label="discord"
+											variant="ghost"
+											size="lg"
+											isRound={true}
+											_hover={{ bg: "#0D74FF" }}
+											icon={
+												<BsInstagram
+													size="18px"
+													color="white"
+												/>
+											}
+										/>
+									</Link>
 								</HStack>
 							</Box>
 						</WrapItem>

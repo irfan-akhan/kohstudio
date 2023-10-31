@@ -1,20 +1,20 @@
 "use client";
 
 import {
-  Box,
-  Flex,
-  Text,
-  IconButton,
-  Button,
-  Stack,
-  Collapse,
-  Icon,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  useColorModeValue,
-  useBreakpointValue,
-  useDisclosure,
+	Box,
+	Flex,
+	Text,
+	IconButton,
+	Button,
+	Stack,
+	Collapse,
+	Icon,
+	Popover,
+	PopoverTrigger,
+	PopoverContent,
+	useColorModeValue,
+	useBreakpointValue,
+	useDisclosure,
 } from "@chakra-ui/react";
 
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -164,22 +164,17 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
 			_hover={{ bg: useColorModeValue("black", "gray.900") }}
 		>
 			<Stack direction={"row"} align={"center"}>
-				<Box>
-					<Box
-						transition={"all .3s ease"}
-						_groupHover={{ color: "white" }}
-						fontWeight={500}
-					>
-						<Link
-							href={href}
-							style={{ textTransform: "capitalize" }}
-						>
-							{label}
-						</Link>
-					</Box>
-					<Box fontSize={"sm"}>
-						<Link href={href}> {subLabel}</Link>
-					</Box>
+				<Box
+					transition={"all .3s ease"}
+					_groupHover={{ color: "white" }}
+					fontWeight={500}
+				>
+					<Link href={href} style={{ textTransform: "capitalize" }}>
+						{label}
+					</Link>
+				</Box>
+				<Box fontSize={"sm"}>
+					<Link href={href}> {subLabel}</Link>
 				</Box>
 			</Stack>
 		</Box>
