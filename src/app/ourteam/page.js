@@ -128,13 +128,7 @@ export default function GridBlurredBackdrop() {
 			<Heading fontSize={"3xl"} mt={20}>
 				Our Team
 			</Heading>
-			<VStack
-				columns={{ base: 1, xl: 2 }}
-				spacing={"20"}
-				mt={16}
-				mb={16}
-				mx={"auto"}
-			>
+			<VStack columns={{ base: 1, xl: 2 }} spacing={"10"} mx={"auto"}>
 				{testimonials.map((cardInfo, index) => (
 					<TestimonialCard key={index} {...cardInfo} index={index} />
 				))}

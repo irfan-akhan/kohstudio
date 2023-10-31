@@ -33,7 +33,7 @@ export default function WithSubnavigation() {
 				color={useColorModeValue("gray.600", "white")}
 				minH={"80px"}
 				py={{ base: 2 }}
-				px={{ base: 5 }}
+				px={{ base: 10 }}
 				borderBottom={1}
 				borderStyle={"solid"}
 				borderColor={useColorModeValue("gray.200", "gray.900")}
@@ -134,7 +134,7 @@ const DesktopNav = () => {
 								bg={popoverContentBgColor}
 								p={4}
 								rounded={"xl"}
-								minW={"sm"}
+								// minW={"sm"}
 							>
 								<Stack>
 									{navItem.children.map((child) => (
@@ -161,13 +161,13 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
 			display={"block"}
 			p={2}
 			rounded={"md"}
-			_hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
+			_hover={{ bg: useColorModeValue("black", "gray.900") }}
 		>
 			<Stack direction={"row"} align={"center"}>
 				<Box>
 					<Box
 						transition={"all .3s ease"}
-						_groupHover={{ color: "pink.400" }}
+						_groupHover={{ color: "white" }}
 						fontWeight={500}
 					>
 						<Link
@@ -304,6 +304,7 @@ const NAV_ITEMS = [
 	},
 	{
 		label: "About",
+		href: "/aboutus",
 		children: [
 			{
 				label: "Offices",
