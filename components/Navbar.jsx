@@ -38,10 +38,12 @@ export default function WithSubnavigation() {
 				borderStyle={"solid"}
 				borderColor={useColorModeValue("gray.200", "gray.900")}
 				align={"center"}
+				width="100vw"
 			>
 				<Flex
 					flex={{ base: 1, md: "auto" }}
 					ml={{ base: -2 }}
+					width="100vw"
 					display={{ base: "flex", md: "none" }}
 				>
 					<IconButton
@@ -59,14 +61,16 @@ export default function WithSubnavigation() {
 				</Flex>
 				<Flex
 					// flex={{ base: 1 }}
-					justifyContent={{ base: "space-between", md: "space-between" }}
+					align="center"
+					width="100vw"
+					justifyContent="space-between"
 				>
 					<Box
 						textAlign={useBreakpointValue({
 							base: "center",
 							md: "left",
 						})}
-            // marginLeft={24}
+						// marginLeft={24}
 						fontFamily={"heading"}
 						color={useColorModeValue("gray.800", "white")}
 						fontWeight={"700"}
@@ -74,11 +78,11 @@ export default function WithSubnavigation() {
 					>
 						<Link href="/">
 							{/* <Image src="/logo.png" height="30" width="40" /> */}
-              KOH
+							KOH
 						</Link>
 					</Box>
 
-					<Flex display={{ base: "none", md: "flex" }} ml={10}>
+					<Flex display={{ base: "none", md: "flex" }}>
 						<DesktopNav />
 					</Flex>
 				</Flex>
@@ -92,237 +96,227 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
+	const linkColor = useColorModeValue("gray.600", "gray.200");
+	const linkHoverColor = useColorModeValue("gray.800", "white");
+	const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
-  return (
-    <Stack direction={"row"} spacing={4} alignItems={"center"} marginLeft={"22rem"}>
-      {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Popover trigger={"hover"} placement={"bottom-start"}>
-            <PopoverTrigger>
-              <Box
-                as="a"
-                p={2}
-                fontSize={"sm"}
-                fontWeight={500}
-                color={linkColor}
-                textTransform={"capitalize"}
-                _hover={{
-                  textDecoration: "none",
-                  color: linkHoverColor,
-                }}
-              >
-                <Link href={navItem.href ?? "#"} style={{textTransform: "capitalize"}}>{navItem.label}</Link>
-              </Box>
-            </PopoverTrigger>
+	return (
+		<Stack direction={"row"} spacing={4} alignItems={"center"}>
+			{NAV_ITEMS.map((navItem) => (
+				<Box key={navItem.label}>
+					<Popover trigger={"hover"} placement={"bottom-start"}>
+						<PopoverTrigger>
+							<Box
+								as="a"
+								p={2}
+								fontSize={"sm"}
+								fontWeight={500}
+								color={linkColor}
+								textTransform={"capitalize"}
+								_hover={{
+									textDecoration: "none",
+									color: linkHoverColor,
+								}}
+							>
+								<Link
+									href={navItem.href ?? "#"}
+									style={{ textTransform: "capitalize" }}
+								>
+									{navItem.label}
+								</Link>
+							</Box>
+						</PopoverTrigger>
 
-            {navItem.children && (
-              <PopoverContent
-                border={0}
-                boxShadow={"xl"}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={"xl"}
-                minW={"sm"}
-              >
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )}
-          </Popover>
-        </Box>
-      ))}
-    </Stack>
-  );
+						{navItem.children && (
+							<PopoverContent
+								border={0}
+								boxShadow={"xl"}
+								bg={popoverContentBgColor}
+								p={4}
+								rounded={"xl"}
+								minW={"sm"}
+							>
+								<Stack>
+									{navItem.children.map((child) => (
+										<DesktopSubNav
+											key={child.label}
+											{...child}
+										/>
+									))}
+								</Stack>
+							</PopoverContent>
+						)}
+					</Popover>
+				</Box>
+			))}
+		</Stack>
+	);
 };
 
 const DesktopSubNav = ({ label, href, subLabel }) => {
-  return (
-    <Box
-      as="a"
-      role={"group"}
-      display={"block"}
-      p={2}
-      rounded={"md"}
-      _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
-    >
-      <Stack direction={"row"} align={"center"}>
-        <Box>
-          <Box
-            transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
-            fontWeight={500}
-          >
-            <Link href={href} style={{textTransform: "capitalize"}}>{label}</Link>
-          </Box>
-          <Box fontSize={"sm"} >
-            <Link href={href}> {subLabel}</Link>
-          </Box>
-        </Box>
-      </Stack>
-    </Box>
-  );
+	return (
+		<Box
+			as="a"
+			role={"group"}
+			display={"block"}
+			p={2}
+			rounded={"md"}
+			_hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
+		>
+			<Stack direction={"row"} align={"center"}>
+				<Box>
+					<Box
+						transition={"all .3s ease"}
+						_groupHover={{ color: "pink.400" }}
+						fontWeight={500}
+					>
+						<Link
+							href={href}
+							style={{ textTransform: "capitalize" }}
+						>
+							{label}
+						</Link>
+					</Box>
+					<Box fontSize={"sm"}>
+						<Link href={href}> {subLabel}</Link>
+					</Box>
+				</Box>
+			</Stack>
+		</Box>
+	);
 };
 
 const MobileNav = () => {
-  return (
-    <Stack
-      bg={useColorModeValue("white", "gray.800")}
-      p={4}
-      display={{ md: "none" }}
-    >
-      {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
-      ))}
-    </Stack>
-  );
+	return (
+		<Stack
+			bg={useColorModeValue("white", "gray.800")}
+			p={4}
+			display={{ md: "none" }}
+		>
+			{NAV_ITEMS.map((navItem) => (
+				<MobileNavItem key={navItem.label} {...navItem} />
+			))}
+		</Stack>
+	);
 };
 
 const MobileNavItem = ({ label, children, href }) => {
-  const { isOpen, onToggle } = useDisclosure();
+	const { isOpen, onToggle } = useDisclosure();
 
-  return (
-    <Stack spacing={4} onClick={children && onToggle}>
-      <Box
-        py={2}
-        as="a"
-        justifyContent="flex-start"
-        gap={2}
-        display={"flex"}
-        alignItems="center"
-        _hover={{
-          textDecoration: "none",
-        }}
-      >
-        <Box fontWeight={600} color={useColorModeValue("gray.600", "gray.200")}>
-          <Link href={href ?? "#"}> {label}</Link>
-        </Box>
-        {children && (
-          <Icon
-            as={MdOutlineKeyboardArrowDown}
-            transition={"all .25s ease-in-out"}
-            transform={isOpen ? "rotate(180deg)" : ""}
-            w={6}
-            h={6}
-          />
-        )}
-      </Box>
+	return (
+		<Stack spacing={4} onClick={children && onToggle}>
+			<Box
+				py={2}
+				as="a"
+				justifyContent="flex-start"
+				gap={2}
+				display={"flex"}
+				alignItems="center"
+				_hover={{
+					textDecoration: "none",
+				}}
+			>
+				<Box
+					fontWeight={600}
+					color={useColorModeValue("gray.600", "gray.200")}
+				>
+					<Link href={href ?? "#"}> {label}</Link>
+				</Box>
+				{children && (
+					<Icon
+						as={MdOutlineKeyboardArrowDown}
+						transition={"all .25s ease-in-out"}
+						transform={isOpen ? "rotate(180deg)" : ""}
+						w={6}
+						h={6}
+					/>
+				)}
+			</Box>
 
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={"solid"}
-          borderColor={useColorModeValue("gray.200", "gray.700")}
-          align={"start"}
-        >
-          {children &&
-            children.map((child) => (
-              <Box as="a" key={child.label} py={2}>
-                <Link href={child.href}>{child.label}</Link>
-              </Box>
-            ))}
-        </Stack>
-      </Collapse>
-    </Stack>
-  );
+			<Collapse
+				in={isOpen}
+				animateOpacity
+				style={{ marginTop: "0!important" }}
+			>
+				<Stack
+					mt={2}
+					pl={4}
+					borderLeft={1}
+					borderStyle={"solid"}
+					borderColor={useColorModeValue("gray.200", "gray.700")}
+					align={"start"}
+				>
+					{children &&
+						children.map((child) => (
+							<Box as="a" key={child.label} py={2}>
+								<Link href={child.href}>{child.label}</Link>
+							</Box>
+						))}
+				</Stack>
+			</Collapse>
+		</Stack>
+	);
 };
 
 const NAV_ITEMS = [
-  {
-    label: "Architecture",
-    children: [
-      {
-        label: "Hospitality",
-        href: "/projects",
-      },
-      {
-        label: "Residential",
-        href: "#",
-      },
-      {
-        label: "Commercial",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Interior",
-    children: [
-      {
-        label: "Hotels",
-        
-        href: "#",
-      },
-      {
-        label: "Homes",
-        href: "#",
-      },
-      {
-        label: "Workplace",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Landscape",
-    href: "/contact",
-  },
-  {
-    label: "Urban Design",
-    href: "/contact",
-  },
+	{
+		label: "Architecture",
+		children: [
+			{
+				label: "Hospitality",
+				href: "/projects",
+			},
+			{
+				label: "Residential",
+				href: "#",
+			},
+			{
+				label: "Commercial",
+				href: "#",
+			},
+		],
+	},
+	{
+		label: "Interior",
+		children: [
+			{
+				label: "Hotels",
 
-  {
-    label: "Exhibition",
-    href: "/contact",
-  },
-  {
-    label: "Product Design",
-    href: "/contact",
-  },
-  {
-    label: "International",
-    children: [
-      {
-        label: "Architecture",
-        href: "/aboutus",
-      },
-      {
-        label: "Interior",
-        href: "#",
-      },
-      {
-        label: "Exhibition",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Team",
-    href: "/ourteam",
-  },
-  {
-    label: "About",
-    children: [
-      {
-        label: "Offices",
-        href: "/aboutus",
-      },
-      {
-        label: "Carrers",
-        href: "/careers",
-      },
-    ],
-  },
-  {
-    label: "Contact",
-    href: "/contact",
-  },
+				href: "#",
+			},
+			{
+				label: "Homes",
+				href: "#",
+			},
+			{
+				label: "Workplace",
+				href: "#",
+			},
+		],
+	},
+	{
+		label: "Product Design",
+		href: "/contact",
+	},
+	{
+		label: "Team",
+		href: "/ourteam",
+	},
+	{
+		label: "About",
+		children: [
+			{
+				label: "Offices",
+				href: "/aboutus",
+			},
+			{
+				label: "Carrers",
+				href: "/careers",
+			},
+		],
+	},
+	{
+		label: "Contact",
+		href: "/contact",
+	},
 ];

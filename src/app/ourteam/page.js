@@ -95,11 +95,11 @@ function TestimonialCard(props) {
 				>
 					{content}
 				</chakra.p>
-				<chakra.p fontWeight={"bold"} fontSize={14}>
+				<chakra.p fontWeight={"bold"} fontSize={16}>
 					{name}
-					<chakra.span fontWeight={"light"} color={"gray.500"}>
-						&nbsp; - {role}
-					</chakra.span>
+				</chakra.p>
+				<chakra.p fontWeight={"light"} fontSize={14}>
+					{role}
 				</chakra.p>
 			</Flex>
 			<Box mb={{ base: 5 }}>
