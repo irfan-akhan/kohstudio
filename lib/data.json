@@ -3,13 +3,13 @@
 		{
 			"id": 1,
 			"typology": "residential",
-			"name": "this is the title of the project",
+			"name": "Harwan",
 			"description": "this is the description of the project with all details",
-			"banner": "/projects/commercial/budgamComplex/image1.jpg",
+			"banner": "/projects/residential/harwan/01.jpg",
 			"images": [
-				{ "drawings": ["imageUrl", "imageUrl"] },
-				{ "renderings": ["imageUrl", "imageUrl"] },
-				{ "location": ["imageUrl", "imageUrl"] }
+				"/projects/residential/harwan/02.jpg",
+				"/projects/residential/harwan/01_Lighting.jpg",
+				"/projects/residential/harwan/01.jpg"
 			],
 
 			"budget": " 200k",
@@ -17,20 +17,172 @@
 			"endDate": "20-05-2022",
 			"client": "client name",
 			"area": "2400 ft",
-			"location": "location of project"
+			"location": "Harwan Srinagar"
+		},
+		{
+			"id": 2,
+			"typology": "residential",
+			"name": "Ishber",
+			"description": "this is the description of the project with all details",
+			"banner": "/projects/residential/isber/01.jpg",
+			"images": ["/projects/residential/isber/01.jpg"],
+
+			"budget": " 200k",
+			"startDate": "20-05-2022",
+			"endDate": "20-05-2022",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "ishber Srinagar"
+		},
+		{
+			"id": 3,
+			"typology": "residential",
+			"name": "Ishber Home Stay",
+			"description": "this is the description of the project with all details",
+			"banner": "/projects/residential/isberHomeStay/banner.jpg",
+			"images": [
+				"/projects/residential/isberHomeStay/01.jpg",
+				"/projects/residential/isberHomeStay/03.jpg",
+				"/projects/residential/isberHomeStay/02.jpg",
+				"/projects/residential/isberHomeStay/banner.jpg",
+				"/projects/residential/isberHomeStay/04.jpg",
+				"/projects/residential/isberHomeStay/05.jpg"
+			],
+
+			"budget": " 200k",
+			"startDate": "20-05-2022",
+			"endDate": "20-05-2022",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "Ishber Srinagar"
+		},
+		{
+			"id": 4,
+			"typology": "residential",
+			"name": "khimber",
+			"description": "this is the description of the project with all details",
+			"banner": "/projects/residential/khimber/banner.jpg",
+			"images": [
+				"/projects/residential/khimber/01.jpg",
+				"/projects/residential/khimber/banner.jpg",
+				"/projects/residential/khimber/02.jpg"
+			],
+
+			"budget": " 200k",
+			"startDate": "20-05-2022",
+			"endDate": "20-05-2022",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "khimber Srinagar"
+		},
+		{
+			"id": 5,
+			"typology": "residential",
+			"name": "shivpora Home Stay",
+			"description": "this is the description of the project with all details",
+			"banner": "/projects/residential/shivporaHomeStay/banner.jpg",
+			"images": [
+				"/projects/residential/shivporaHomeStay/01.jpg",
+				"/projects/residential/shivporaHomeStay/03.jpg",
+				"/projects/residential/shivporaHomeStay/04.jpg",
+				"/projects/residential/shivporaHomeStay/banner.jpg",
+				"/projects/residential/shivporaHomeStay/05.jpg",
+				"/projects/residential/shivporaHomeStay/06.jpg",
+				"/projects/residential/shivporaHomeStay/02.jpg"
+			],
+
+			"budget": " 200k",
+			"startDate": "20-05-2022",
+			"endDate": "20-05-2022",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "Shivpora Srinagar"
+		}
+	],
+	"recreational": [
+		{
+			"id": 1,
+			"typology": "recreational",
+			"name": "Nishat Hut",
+			"description": "this is the description of the project with all details",
+			"banner": "/projects/recreational/NishatHut/banner.jpg",
+			"images": [
+				"/projects/recreational/NishatHut/02.jpg",
+				"/projects/recreational/NishatHut/03.jpg",
+				"/projects/recreational/NishatHut/04.jpg",
+				"/projects/recreational/NishatHut/banner.jpg",
+				"/projects/recreational/NishatHut/05.jpg",
+				"/projects/recreational/NishatHut/06.jpg",
+				"/projects/recreational/NishatHut/01.jpg"
+			],
+
+			"budget": " 200k",
+			"startDate": "20-05-2022",
+			"endDate": "20-05-2022",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "Nishat Srinagar"
+		}
+	],
+	"international": [
+		{
+			"id": 1,
+			"typology": "international",
+			"name": "Nishat Hut",
+			"description": "this is the description of the project with all details",
+			"banner": "/projects/international/dubai/banner.jpg",
+			"images": [
+				"/projects/international/dubai/02.jpg",
+				"/projects/international/dubai/03.jpg",
+				"/projects/international/dubai/04.jpg",
+				"/projects/international/dubai/banner.jpg",
+				"/projects/international/dubai/05.jpg",
+				"/projects/international/dubai/01.jpg"
+			],
+
+			"budget": " 200k",
+			"startDate": "20-05-2022",
+			"endDate": "20-05-2022",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "Dubai"
+		}
+	],
+	"urban": [
+		{
+			"id": 1,
+			"typology": "urban",
+			"name": "hazratbal Regeneration",
+			"description": "this is the description of the project with all details",
+			"banner": "/projects/urban/hazratbalRegeneration/banner.jpg",
+			"images": [
+				"/projects/urban/hazratbalRegeneration/02.jpg",
+				"/projects/urban/hazratbalRegeneration/03.jpg",
+				"/projects/urban/hazratbalRegeneration/04.jpg",
+				"/projects/urban/hazratbalRegeneration/banner.jpg",
+				"/projects/urban/hazratbalRegeneration/05.jpg",
+				"/projects/urban/hazratbalRegeneration/01.jpg"
+			],
+
+			"budget": " 200k",
+			"startDate": "20-05-2022",
+			"endDate": "20-05-2022",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "Hazratbal Srinagar"
 		}
 	],
 	"commercial": [
 		{
-			"id": 2,
+			"id": 1,
 			"typology": "commercial",
-			"name": "this is the title of the project",
+			"name": "CIE Habitat Center",
 			"description": "this is the description of the project with all details",
-			"banner": "/projects/commercial/budgamComplex/image1.jpg",
+			"banner": "/projects/commercial/CIEHabitatCenter/banner.jpg",
 			"images": [
-				{ "drawings": ["imageUrl", "imageUrl"] },
-				{ "renderings": ["imageUrl", "imageUrl"] },
-				{ "location": ["imageUrl", "imageUrl"] }
+				"/projects/commercial/CIEHabitatCenter/banner.jpg",
+				"/projects/commercial/CIEHabitatCenter/01.jpg",
+				"/projects/commercial/CIEHabitatCenter/02.jpg"
 			],
 
 			"budget": " 200k",
@@ -38,18 +190,39 @@
 			"endDate": "20-05-2022",
 			"client": "client name",
 			"area": "2400 ft",
-			"location": "location of project"
+			"location": "Srinagar"
+		},
+		{
+			"id": 2,
+			"typology": "commercial",
+			"name": "Budgam complex",
+			"description": "this is the description of the project with all details",
+			"banner": "/projects/commercial/budgamComplex/banner.jpg",
+			"images": [
+				"/projects/commercial/budgamComplex/banner.jpg",
+				"/projects/commercial/budgamComplex/01.jpg",
+				"/projects/commercial/budgamComplex/02.jpg"
+			],
+
+			"budget": " 200k",
+			"startDate": "20-05-2022",
+			"endDate": "20-05-2022",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "Budgam"
 		},
 		{
 			"id": 3,
 			"typology": "commercial",
-			"name": "aga syed murtaza",
+			"name": "confrence Room JK Police",
 			"description": "this is the description of the project with all details",
-			"banner": "/projects/commercial/budgamComplex/image1.jpg",
+			"banner": "/projects/commercial/confrenceRoomJKPolice/banner.jpg",
 			"images": [
-				{ "drawings": ["imageUrl", "imageUrl"] },
-				{ "renderings": ["imageUrl", "imageUrl"] },
-				{ "location": ["imageUrl", "imageUrl"] }
+				"/projects/commercial/confrenceRoomJKPolice/01.jpg",
+				"/projects/commercial/confrenceRoomJKPolice/banner.jpg",
+				"/projects/commercial/confrenceRoomJKPolice/02.jpg",
+				"/projects/commercial/confrenceRoomJKPolice/03.jpg",
+				"/projects/commercial/confrenceRoomJKPolice/04.jpg"
 			],
 
 			"budget": " 200k",
@@ -57,7 +230,60 @@
 			"endDate": "01-05-2023",
 			"client": "client name",
 			"area": "2400 ft",
-			"location": "location of project"
+			"location": "Srinagar"
+		},
+		{
+			"id": 4,
+			"typology": "commercial",
+			"name": "dubai Lobby",
+			"description": "this is the description of the project with all details",
+			"banner": "/projects/commercial/dubaiLobby/banner.jpg",
+			"images": [
+				"/projects/commercial/dubaiLobby/banner.jpg",
+				"/projects/commercial/dubaiLobby/01.jpg",
+				"/projects/commercial/dubaiLobby/03.jpg",
+				"/projects/commercial/dubaiLobby/02.jpg"
+			],
+
+			"budget": " 200k",
+			"startDate": "15-12-2020",
+			"endDate": "01-05-2023",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "Dubai"
+		},
+		{
+			"id": 5,
+			"typology": "commercial",
+			"name": "langalbal pahalgam",
+			"description": "this is the description of the project with all details",
+			"banner": "/projects/commercial/langalbal/banner.jpg",
+			"images": ["/projects/commercial/langalbal/banner.jpg"],
+
+			"budget": " 200k",
+			"startDate": "15-12-2020",
+			"endDate": "01-05-2023",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "Pahalgam"
+		},
+		{
+			"id": 6,
+			"typology": "commercial",
+			"name": "munawara",
+			"description": "this is the description of the project with all details",
+			"banner": "/projects/commercial/munawara/banner.jpg",
+			"images": [
+				"/projects/commercial/munawara/01.jpg",
+				"/projects/commercial/munawara/02.jpg"
+			],
+
+			"budget": " 200k",
+			"startDate": "15-12-2020",
+			"endDate": "01-05-2023",
+			"client": "client name",
+			"area": "2400 ft",
+			"location": "Srinagar"
 		}
 	]
 }
