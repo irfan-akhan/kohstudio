@@ -32,7 +32,7 @@ export default function Footer() {
           <Stack align={"flex-start"}>
             <ListHeader>KOH Studio</ListHeader>
             <Box>
-              <Text fontSize={"13px"} maxW={"250px"} textAlign={"justify"}>
+              <Text fontSize={"13px"} maxW={{base:"100%", lg:"250px"}} textAlign={"justify"}>
               👉 Nestled in the picturesque landscapes of Srinagar, Kashmir, Koh
                 Studio stands as a beacon of innovative design and architectural
                 brilliance. Koh Studio has redefined the architectural landscape
