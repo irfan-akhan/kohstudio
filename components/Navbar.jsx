@@ -283,6 +283,10 @@ const NAV_ITEMS = [
 	// 		},
 	// 	],
 	// },
+	{
+		label: "International",
+		href: "/work/international",
+	},
 	// {
 	// 	label: "Product Design",
 	// 	href: "/contact",
