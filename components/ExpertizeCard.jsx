@@ -120,6 +120,8 @@ export default function ExpertiseCard({
 					marginTop="2"
 					color={useColorModeValue("gray.700", "gray.200")}
 					fontSize="lg"
+					width={{base:"100%"}}
+					padding={{base:"0"}}
 				>
 					{text
 						? text
