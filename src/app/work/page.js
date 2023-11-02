@@ -10,9 +10,8 @@ import { useRouter } from "next/navigation";
 export default function page() {
 	const router = useRouter();
 	const projects = Object?.values(data)?.flatMap((item) => item);
-	console.log("first item", projects);
 	return (
-		<Container my={"9rem"} maxW={"70rem"}>
+		<Container my={"9rem"} maxW={{base:"100%", lg:"70rem"}}>
 			<Heading textAlign={"center"} my={10}>
 				WORK
 			</Heading>
