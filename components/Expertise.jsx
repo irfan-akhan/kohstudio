@@ -5,7 +5,7 @@ import ExpertiseCard from "./ExpertizeCard";
 
 const Expertise = ({ order }) => {
 	return (
-		<Container maxW={"7xl"} p="12">
+		<Container maxW={"7xl"} p={{ base: 6, md: "12" }}>
 			<Heading as="h1" textAlign="center" textTransform="uppercase">
 				Expertise
 			</Heading>

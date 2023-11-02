@@ -48,7 +48,7 @@ export default function ExpertiseCard({
 			data-aos-anchor-placement="top-center"
 			marginTop={{ base: "1", sm: "5" }}
 			display="flex"
-			padding="4"
+			padding={{ base: 1, md: 4 }}
 			flexDirection={{
 				base: "column",
 				sm: order ? "row-reverse" : "row",
