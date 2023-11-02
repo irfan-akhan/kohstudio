@@ -4,18 +4,26 @@ import React from "react";
 export default function Aboutus() {
 	return (
 		<Container data-aos="zoom-in-down" maxW={"70rem"} my={"8rem"}>
-			<Heading fontSize={"4xl"} textAlign={"center"} my={10}>
+			<Heading
+				fontSize={"4xl"}
+				textAlign={"center"}
+				my={{ base: 5, md: 10 }}
+			>
 				Koh Studio
 			</Heading>
 			<Heading
-				fontSize={"2xl"}
+				fontSize={{ base: "xl", md: "2xl" }}
 				fontWeight={500}
 				textAlign={"center"}
-				my={10}
+				my={{ base: 5, md: 10 }}
 			>
 				Where Minimalism Meets Industrial Elegance in Kashmir
 			</Heading>
-			<Text fontWeight={300} textAlign={"center"} fontSize={"18px"}>
+			<Text
+				fontWeight={300}
+				textAlign={"center"}
+				fontSize={{ base: "15px", md: "18px" }}
+			>
 				Nestled in the picturesque landscapes of Srinagar, Kashmir, Koh
 				Studio stands as a beacon of innovative design and architectural
 				brilliance. Koh Studio has redefined the architectural landscape
@@ -37,7 +45,7 @@ export default function Aboutus() {
 				data-aos-delay="500"
 				fontWeight={300}
 				textAlign={"center"}
-				fontSize={"18px"}
+				fontSize={{ base: "15px", md: "18px" }}
 				mt={6}
 			>
 				Koh Studio is driven by a singular vision: to create spaces that
@@ -62,7 +70,7 @@ export default function Aboutus() {
 				data-aos="fade-up"
 				fontWeight={300}
 				textAlign={"center"}
-				fontSize={"18px"}
+				fontSize={{ base: "15px", md: "18px" }}
 				mt={6}
 			>
 				At the helm of Koh Studio is Principal Architect Hakim Danish, a
@@ -87,7 +95,7 @@ export default function Aboutus() {
 				data-aos="fade-up"
 				fontWeight={300}
 				textAlign={"center"}
-				fontSize={"18px"}
+				fontSize={{ base: "15px", md: "18px" }}
 				mt={6}
 			>
 				Koh Studio's signature minimalistic and industrial style
@@ -112,7 +120,7 @@ export default function Aboutus() {
 				data-aos="fade-up"
 				fontWeight={300}
 				textAlign={"center"}
-				fontSize={"18px"}
+				fontSize={{ base: "15px", md: "18px" }}
 				mt={6}
 			>
 				Koh Studio's portfolio boasts a diverse range of projects,
@@ -137,7 +145,7 @@ export default function Aboutus() {
 				data-aos="fade-up"
 				fontWeight={300}
 				textAlign={"center"}
-				fontSize={"18px"}
+				fontSize={{ base: "15px", md: "18px" }}
 				mt={6}
 			>
 				Beyond architectural excellence, Koh Studio is deeply committed
@@ -161,7 +169,7 @@ export default function Aboutus() {
 				data-aos="fade-up"
 				fontWeight={300}
 				textAlign={"center"}
-				fontSize={"18px"}
+				fontSize={{ base: "15px", md: "18px" }}
 				mt={6}
 			>
 				Located in the heart of Srinagar, Koh Studio welcomes visitors

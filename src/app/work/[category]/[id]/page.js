@@ -65,19 +65,13 @@ const ProjectDetails = () => {
 			>
 				<BreadcrumbItem>
 					<BreadcrumbLink>
-						<Link href="/">Work</Link>
-					</BreadcrumbLink>
-				</BreadcrumbItem>
-
-				<BreadcrumbItem>
-					<BreadcrumbLink href="#">
-						<Link href="/">Category</Link>
+						<Link href="/work">Work</Link>
 					</BreadcrumbLink>
 				</BreadcrumbItem>
 
 				<BreadcrumbItem isCurrentPage>
 					<BreadcrumbLink>
-						<Link href="/">
+						<Link href={`/work/${projectInfo?.typology}`}>
 							{projectInfo?.typology.charAt(0).toUpperCase() +
 								projectInfo?.typology.slice(1)}
 						</Link>
@@ -111,7 +105,7 @@ const ProjectDetails = () => {
 						}}
 					/>
 				</Box>
-				<Box maxW={"500px"} height={"400px"}>
+				<Box maxW={"500px"} height={{ md: "400px" }}>
 					<Flex gap={20} mb={"6rem"} data-aos="fade-right">
 						<Box alignItems={"stretch"}>
 							<Text style={labelStyle}>project-</Text>
