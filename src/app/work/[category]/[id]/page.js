@@ -1,15 +1,15 @@
 "use client";
 import {
-	Box,
-	Breadcrumb,
-	BreadcrumbItem,
-	BreadcrumbLink,
-	Button,
-	Container,
-	Flex,
-	Heading,
-	Text,
-	VStack,
+  Box,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  Text,
+  VStack,
 } from "@chakra-ui/react";
 
 import Image from "next/image";
@@ -21,30 +21,28 @@ import data from "../../../../../lib/data.json";
 import React, { useEffect, useState } from "react";
 
 const labelStyle = {
-	textTransform: "capitalize",
-	fontSize: "md",
-	fontWeight: 300,
-	marginBottom: "12px",
-	fontSize: "18px",
+  textTransform: "capitalize",
+  fontSize: "md",
+  fontWeight: 300,
+  marginBottom: "12px",
+  fontSize: "18px",
 };
 const ValueStyle = {
-	textTransform: "capitalize",
-	fontSize: "large",
-	fontWeight: 300,
-	marginBottom: "12px",
-	fontSize: "18px",
+  textTransform: "capitalize",
+  fontSize: "large",
+  fontWeight: 300,
+  marginBottom: "12px",
+  fontSize: "18px",
 };
 const ProjectDetails = () => {
-	const { id, category } = useParams();
-	console.log("use orarsm", id, category);
-	const [projectInfo, setProjectInfo] = useState(null);
-	const router = useRouter();
-	useEffect(() => {
-		const projectInfo =
-			data[category].find((project) => project.id == id) || null;
-		console.log("ProjecInfo ", projectInfo);
-		setProjectInfo(projectInfo);
-	}, [category, id]);
+  const { id, category } = useParams();
+  const [projectInfo, setProjectInfo] = useState(null);
+  const router = useRouter();
+  useEffect(() => {
+    const projectInfo =
+      data[category].find((project) => project.id == id) || null;
+    setProjectInfo(projectInfo);
+  }, [category, id]);
 
 	const onClickHandler = (e) => {
 		let projectId = id;
@@ -164,45 +162,6 @@ const ProjectDetails = () => {
 					))}
 				</VStack>
 			)}
-			{/* <Flex
-				direction={{ base: "column", md: "initial" }}
-				justify="space-between"
-				my="10"
-			>
-				<Image
-					src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
-					alt={projectInfo.name}
-					width={700}
-					height={700}
-				/>
-				<Text
-					mt={10}
-					fontSize={"18px"}
-					maxW={{ base: "initial", md: "35%" }}
-					fontWeight={300}
-				>
-					{projectInfo?.description}
-				</Text>
-			</Flex>
-			<Flex
-				direction={{ base: "column", md: "initial" }}
-				justify="space-between"
-				my={{ base: "10", md: "20" }}
-			>
-				<Text
-					fontSize={"18px"}
-					maxW={{ base: "initial", md: "35%" }}
-					fontWeight={300}
-				>
-					{projectInfo?.description}
-				</Text>
-				<Image
-					src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
-					alt="project image"
-					width={700}
-					height={700}
-				/>
-			</Flex>*/}
 			<Flex
 				textAlign={"center"}
 				my={{ base: 10, md: 20 }}
