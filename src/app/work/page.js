@@ -19,6 +19,8 @@ export default function page() {
 			<Flex flexWrap={"wrap"} gap={20}>
 				{projects?.map((item, index) => (
 					<div
+						data-aos="fade-right"
+						data-aos-delay={50 * (index + 1)}
 						key={index}
 						className={styles.card}
 						style={{
@@ -40,7 +42,7 @@ export default function page() {
 							/>
 							<p className={styles.card__title}>{item?.name}</p>
 							<p className={styles.card__description}>
-								{item?.description}
+								{item?.typology}
 							</p>
 							<div>
 								<Link href="#" className={styles.card__link}>

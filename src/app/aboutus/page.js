@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Aboutus() {
 	return (
-		<Container maxW={"70rem"} my={"8rem"}>
+		<Container data-aos="zoom-in-down" maxW={"70rem"} my={"8rem"}>
 			<Heading fontSize={"4xl"} textAlign={"center"} my={10}>
 				Koh Studio
 			</Heading>
@@ -27,10 +27,14 @@ export default function Aboutus() {
 				fontWeight={500}
 				textAlign={"center"}
 				mt={20}
+				data-aos="fade-up"
+				data-aos-delay="400"
 			>
 				Vision and Design Philosophy
 			</Heading>
 			<Text
+				data-aos="fade-up"
+				data-aos-delay="500"
 				fontWeight={300}
 				textAlign={"center"}
 				fontSize={"18px"}
@@ -46,6 +50,7 @@ export default function Aboutus() {
 				respect for the natural environment.
 			</Text>
 			<Heading
+				data-aos="fade-up"
 				fontSize={"xl"}
 				fontWeight={500}
 				textAlign={"center"}
@@ -54,6 +59,7 @@ export default function Aboutus() {
 				Principal Architect: Hakim Danish
 			</Heading>
 			<Text
+				data-aos="fade-up"
 				fontWeight={300}
 				textAlign={"center"}
 				fontSize={"18px"}
@@ -69,6 +75,7 @@ export default function Aboutus() {
 				region.
 			</Text>
 			<Heading
+				data-aos="fade-up"
 				fontSize={"xl"}
 				fontWeight={500}
 				textAlign={"center"}
@@ -77,6 +84,7 @@ export default function Aboutus() {
 				Minimalistic and Industrial Style Approach
 			</Heading>
 			<Text
+				data-aos="fade-up"
 				fontWeight={300}
 				textAlign={"center"}
 				fontSize={"18px"}
@@ -92,6 +100,7 @@ export default function Aboutus() {
 				that are both visually stunning and highly practical.
 			</Text>
 			<Heading
+				data-aos="fade-up"
 				fontSize={"xl"}
 				fontWeight={500}
 				textAlign={"center"}
@@ -100,6 +109,7 @@ export default function Aboutus() {
 				Portfolio
 			</Heading>
 			<Text
+				data-aos="fade-up"
 				fontWeight={300}
 				textAlign={"center"}
 				fontSize={"18px"}
@@ -115,6 +125,7 @@ export default function Aboutus() {
 				a harmonious balance between tradition and modernity.
 			</Text>
 			<Heading
+				data-aos="fade-up"
 				fontSize={"xl"}
 				fontWeight={500}
 				textAlign={"center"}
@@ -123,6 +134,7 @@ export default function Aboutus() {
 				Community Engagement and Sustainability
 			</Heading>
 			<Text
+				data-aos="fade-up"
 				fontWeight={300}
 				textAlign={"center"}
 				fontSize={"18px"}
@@ -137,6 +149,7 @@ export default function Aboutus() {
 				that their creations have a minimal environmental impact.
 			</Text>
 			<Heading
+				data-aos="fade-up"
 				fontSize={"xl"}
 				fontWeight={500}
 				textAlign={"center"}
@@ -145,6 +158,7 @@ export default function Aboutus() {
 				Visit Koh Studio
 			</Heading>
 			<Text
+				data-aos="fade-up"
 				fontWeight={300}
 				textAlign={"center"}
 				fontSize={"18px"}

@@ -8,7 +8,6 @@ export default function ImageGrid() {
 	return (
 		<Container maxW={"100%"} my={20}>
 			<Grid
-				h="1500px"
 				templateRows="repeat(6, 1fr)"
 				templateColumns="repeat(6, 1fr)"
 				gap={4}
@@ -21,9 +20,10 @@ export default function ImageGrid() {
 					data-aos-delay="50"
 					rowSpan={2}
 					colSpan={2}
-					backgroundImage="url(/gallery/Drawing1.jpg)"
+					backgroundImage="url(/gallery/confrence_room.jpg)"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
+					minH="90vh"
 				/>
 				<GridItem
 					data-aos="fade-up"
@@ -33,44 +33,50 @@ export default function ImageGrid() {
 					bg="url(/gallery/townsquare.jpg)"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
+					minH="90vh"
 				/>
 				<GridItem
+					minH="90vh"
 					data-aos="fade-up"
 					data-aos-delay="50"
 					colSpan={2}
 					rowSpan={2}
-					backgroundImage="url(/gallery/Drawing2.jpg)"
+					backgroundImage="url(/gallery/harwan.jpg)"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
 				/>
 				<GridItem
+					minH="90vh"
 					data-aos="fade-up"
 					data-aos-delay="50"
 					colSpan={6}
 					rowSpan={2}
-					backgroundImage="url(/gallery/Drawing3.jpg)"
+					backgroundImage="url(/gallery/khimber.jpg)"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
 				/>
 				<GridItem
+					minH="90vh"
 					data-aos="fade-up"
 					data-aos-delay="50"
 					rowSpan={2}
 					colSpan={3}
-					backgroundImage="url(/gallery/Drawing3.jpg)"
+					backgroundImage="url(/gallery/shivpora.jpg)"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
 				/>
 				<GridItem
+					minH="90vh"
 					data-aos="fade-up"
 					data-aos-delay="50"
 					colSpan={3}
 					rowSpan={3}
-					backgroundImage="url(/gallery/Drawing1.jpg)"
+					backgroundImage="url(/gallery/munawarabad.jpg)"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
 				/>
 				<GridItem
+					minH="90vh"
 					data-aos="fade-up"
 					data-aos-delay="50"
 					colSpan={4}
@@ -80,11 +86,32 @@ export default function ImageGrid() {
 					backgroundSize="cover"
 				/>
 				<GridItem
+					minH="90vh"
 					data-aos="fade-up"
 					data-aos-delay="50"
 					colSpan={2}
 					rowSpan={19}
-					backgroundImage="url(/gallery/Drawing4.jpg)"
+					backgroundImage="url(/gallery/nishat_hut.jpg)"
+					backgroundRepeat="no-repeat"
+					backgroundSize="cover"
+				/>
+				<GridItem
+					minH="90vh"
+					data-aos="fade-up"
+					data-aos-delay="50"
+					colSpan={2}
+					rowSpan={19}
+					backgroundImage="url(/gallery/ishber.jpg)"
+					backgroundRepeat="no-repeat"
+					backgroundSize="cover"
+				/>
+				<GridItem
+					minH="90vh"
+					data-aos="fade-up"
+					data-aos-delay="50"
+					colSpan={4}
+					rowSpan={19}
+					backgroundImage="url(/gallery/drawing4.jpg)"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
 				/>

@@ -14,12 +14,14 @@ export default function page() {
 	console.log("first params", category);
 	return (
 		<Container my={"9rem"} maxW={"70rem"}>
-			<Heading textAlign={"center"} my={10} textTransform='uppercase'>
+			<Heading textAlign={"center"} my={10} textTransform="uppercase">
 				{category}
 			</Heading>
 			<Flex flexWrap={"wrap"} gap={20}>
 				{projects?.map((item, index) => (
 					<div
+						data-aos="fade-right"
+						data-aos-delay={50 * (index + 1)}
 						key={index}
 						className={styles.card}
 						style={{

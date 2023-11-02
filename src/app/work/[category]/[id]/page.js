@@ -52,7 +52,11 @@ const ProjectDetails = () => {
 		router.push(`/work/${category}/${projectId}`);
 	};
 	return (
-		<Container mt={{ base: "6rem", md: "8rem" }} maxW={"80rem"}>
+		<Container
+			data-aos="zoom-in"
+			mt={{ base: "6rem", md: "8rem" }}
+			maxW={"80rem"}
+		>
 			<Breadcrumb
 				spacing="8px"
 				separator={<BiChevronRight color="gray.500" />}
@@ -108,7 +112,7 @@ const ProjectDetails = () => {
 					/>
 				</Box>
 				<Box maxW={"500px"} height={"400px"}>
-					<Flex gap={20} mb={"6rem"}>
+					<Flex gap={20} mb={"6rem"} data-aos="fade-right">
 						<Box alignItems={"stretch"}>
 							<Text style={labelStyle}>project-</Text>
 							<Text style={labelStyle}>typology-</Text>
@@ -135,6 +139,7 @@ const ProjectDetails = () => {
 						</Box>
 					</Flex>
 					<Image
+						data-aos="fade-left"
 						src={projectInfo?.banner}
 						alt="project image"
 						width={500}
@@ -150,6 +155,7 @@ const ProjectDetails = () => {
 				<VStack my="10">
 					{projectInfo.images.map((imageUrl, idx) => (
 						<Image
+							data-aos="zoom-in-up"
 							key={idx}
 							src={imageUrl}
 							alt={projectInfo.name}

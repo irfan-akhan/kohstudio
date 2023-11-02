@@ -30,7 +30,7 @@ export default function WithSubnavigation() {
 				color={useColorModeValue("gray.600", "white")}
 				minH={"80px"}
 				py={{ base: 2 }}
-				px={{ base: 10 }}
+				px={{ base: 2, md: 10 }}
 				borderBottom={1}
 				borderStyle={"solid"}
 				borderColor={useColorModeValue("gray.200", "gray.900")}
@@ -73,9 +73,7 @@ export default function WithSubnavigation() {
 						fontWeight={"700"}
 						fontSize={"20px"}
 					>
-						<Link href="/">
-							KOH
-						</Link>
+						<Link href="/">KOH</Link>
 					</Box>
 
 					<Flex display={{ base: "none", md: "flex" }}>
@@ -253,42 +251,42 @@ const NAV_ITEMS = [
 	{
 		label: "Architecture",
 		children: [
-			{
-				label: "Hospitality",
-				href: "/work",
-			},
+			// {
+			// 	label: "Hospitality",
+			// 	href: "/work",
+			// },
 			{
 				label: "Residential",
-				href: "#",
+				href: "/work/residential",
 			},
 			{
 				label: "Commercial",
-				href: "#",
+				href: "/work/commercial",
 			},
 		],
 	},
-	{
-		label: "Interior",
-		children: [
-			{
-				label: "Hotels",
+	// {
+	// 	label: "Interior",
+	// 	children: [
+	// 		{
+	// 			label: "Hotels",
 
-				href: "#",
-			},
-			{
-				label: "Homes",
-				href: "#",
-			},
-			{
-				label: "Workplace",
-				href: "#",
-			},
-		],
-	},
-	{
-		label: "Product Design",
-		href: "/contact",
-	},
+	// 			href: "#",
+	// 		},
+	// 		{
+	// 			label: "Homes",
+	// 			href: "#",
+	// 		},
+	// 		{
+	// 			label: "Workplace",
+	// 			href: "#",
+	// 		},
+	// 	],
+	// },
+	// {
+	// 	label: "Product Design",
+	// 	href: "/contact",
+	// },
 	{
 		label: "Team",
 		href: "/ourteam",
