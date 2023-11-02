@@ -1,9 +1,9 @@
+let nodemailer = require("nodemailer");
 import { NextResponse, NextRequest } from "next/server";
 export async function POST(req, res) {
 	console.log("first", req);
-	const { body } = await req.json();
-	console.log(body);
-	let nodemailer = require("nodemailer");
+	const data = await req.json();
+
 	let transporter = nodemailer.createTransport({
 		host: "shahjeefood.com",
 		port: "465",
@@ -22,11 +22,11 @@ export async function POST(req, res) {
 		}
 	});
 	const mailData = {
-		from: "officialirfanafzal@gmail.com",
+		from: data.name,
 		to: "info@shahjeefood.com",
-		subject: `Message From ${body.name}`,
-		text: body.message,
-		html: `<div>${body.message}</div> <table
+		subject: `Message From ${data.name}`,
+		text: data.message,
+		html: `<div>${data.message}</div> <table
 		id="zs-output-sig"
 		border="0"
 		cellpadding="0"
@@ -383,5 +383,4 @@ export async function POST(req, res) {
 		else console.log("send mail no error", info);
 	});
 	return NextResponse.json({ id: 1 });
-	// res.status(200);
 }
