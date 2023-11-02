@@ -49,7 +49,7 @@ export default function HeroBanner() {
 			backgroundRepeat="no-repeat"
 			backgroundImage="/hero.jpg"
 		>
-			<Stack
+			{/* <Stack
 				as={Box}
 				textAlign={"center"}
 				color={"white"}
@@ -85,7 +85,7 @@ export default function HeroBanner() {
 						pre-releases and sneak-peaks.
 					</Text>
 				</motion.div>
-			</Stack>
+			</Stack> */}
 		</Container>
 	);
 }

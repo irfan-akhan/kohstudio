@@ -73,7 +73,7 @@ export default function WithSubnavigation() {
 						fontWeight={"700"}
 						fontSize={"20px"}
 					>
-						<Link href="/">KOH</Link>
+						<Link href="/">KOH STUDIO</Link>
 					</Box>
 
 					<Flex display={{ base: "none", md: "flex" }}>
