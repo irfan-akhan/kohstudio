@@ -121,7 +121,8 @@ export default function ImageGrid() {
 					rowSpan={19}
 					backgroundImage="url(/gallery/drawing4.jpg)"
 					backgroundRepeat="no-repeat"
-					backgroundSize="cover"
+					// backgroundSize="cover"
+					objectFit={"fill"}
 				/>
 			</Grid>
 			<Text

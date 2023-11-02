@@ -47,7 +47,7 @@ export default function HeroBanner() {
 			minW="100vw"
 			backgroundSize="cover"
 			backgroundRepeat="no-repeat"
-			background="url(https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXJjaGl0ZWN0dXJlfGVufDB8fDB8fHww&w=1000&q=80)"
+			backgroundImage="/hero.jpg"
 		>
 			{/* <Stack
 				as={Box}
