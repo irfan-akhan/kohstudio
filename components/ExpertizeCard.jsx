@@ -11,6 +11,7 @@ import {
 	Text,
 	useColorModeValue,
 } from "@chakra-ui/react";
+import data from "../lib/data.json";
 import { useRouter } from "next/navigation";
 const BlogTags = (props) => {
 	const { marginTop = 0, tags } = props;
@@ -76,7 +77,9 @@ export default function ExpertiseCard({
 						<Image
 							borderRadius="lg"
 							src={
-								"https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
+								data?.[heading?.toLowerCase()][0]
+									? data?.[heading?.toLowerCase()][0].banner
+									: ""
 							}
 							alt="some good alt text"
 							objectFit="contain"
