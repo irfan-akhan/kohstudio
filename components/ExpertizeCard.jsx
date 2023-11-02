@@ -45,10 +45,6 @@ export default function ExpertiseCard({
 		<Flex
 			data-aos={animationType}
 			data-aos-anchor-placement="top-center"
-			_hover={{
-				bgColor: "#d7d7d7",
-				transition: "all 1s ease",
-			}}
 			marginTop={{ base: "1", sm: "5" }}
 			display="flex"
 			padding="4"
