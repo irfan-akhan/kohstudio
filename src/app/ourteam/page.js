@@ -30,11 +30,11 @@ const testimonials = [
 	},
 	{
 		name: "Lokesh Khati",
-		role: "Architect",
+		role: "Senior Architect",
 		content: `Lokesh stands as a revered figure within Koh Studio, where he serves as a Senior Architect known for his exceptional expertise in construction and master planning. With a wealth of experience and a deep passion for architectural innovation, Lokesh has become a driving force behind some of the studio's most remarkable and visionary projects.
     Lokesh's journey in the architectural world began with a profound fascination for shaping spaces that harmonize seamlessly with the environment and cater to the needs of the community. Armed with a solid educational background and an insatiable curiosity, he quickly ascended through the ranks, earning a reputation for his keen eye for detail and his ability to transform concepts into tangible, awe-inspiring structures.
     `,
-		avatar: "/team/vikas.jpg",
+		avatar: "/team/lokesh.jpg",
 	},
 	{
 		name: "Hakim Saqib",
