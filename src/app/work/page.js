@@ -1,9 +1,8 @@
 "use client";
-import { Container, Flex, Heading } from "@chakra-ui/react";
+import { Container, Flex, Heading, Image } from "@chakra-ui/react";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import styles from "../../../styles/project.module.css";
-import Image from "next/image";
 import data from "../../../lib/data.json";
 import { useRouter } from "next/navigation";
 
@@ -45,7 +44,7 @@ export default function page() {
 								height={300}
 								width={300}
 								alt="project_banner"
-								style={{ borderRadius: "10px" }}
+								style={{ borderRadius: "10px", width:"300px", height:"200px" }}
 							/>
 							<p className={styles.card__title}>{item?.name}</p>
 							<p className={styles.card__description}>
