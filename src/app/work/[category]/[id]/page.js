@@ -145,7 +145,7 @@ const ProjectDetails = () => {
 			</Flex>
 			{projectInfo?.images?.length && (
 				<VStack my="10">
-					{projectInfo.images.map((imageUrl, idx) => (
+					{projectInfo?.images?.map((imageUrl, idx) => (
 						<Image
 							data-aos="zoom-in-up"
 							key={idx}
