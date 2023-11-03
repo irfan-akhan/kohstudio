@@ -5,7 +5,7 @@ const FeedCard = () => {
 	return (
 		<Box p="10">
 			<blockquote
-				class="instagram-media"
+				className="instagram-media"
 				data-instgrm-captioned
 				data-instgrm-permalink="https://www.instagram.com/reel/Cu2b-7RJimp/?utm_source=ig_embed&amp;utm_campaign=loading"
 				data-instgrm-version="14"
@@ -101,9 +101,9 @@ const FeedCard = () => {
 							>
 								<g
 									stroke="none"
-									stroke-width="1"
+									strokeWidth="1"
 									fill="none"
-									fill-rule="evenodd"
+									fillRule="evenodd"
 								>
 									<g
 										transform="translate(-511.000000, -20.000000)"
@@ -140,13 +140,61 @@ const FeedCard = () => {
 							}}
 						>
 							<div>
-								{/* <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> */}
-								{/* <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> */}
-								{/* <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div> */}
+								<div
+									style={{
+										backgroundColor: " #F4F4F4",
+										borderRadius: "50%",
+										height: "12.5px",
+										width: "12.5px",
+										transform:
+											"translateX(0px) translateY(7px)",
+									}}
+								></div>
+								<div
+									style={{
+										backgroundColor: " #F4F4F4",
+										height: "12.5px",
+										transform:
+											"rotate(-45deg) translateX(3px) translateY(1px)",
+										width: "12.5px",
+										flexGrow: 0,
+										marginRight: "14px",
+										marginLeft: "2px",
+									}}
+								></div>
+								//{" "}
+								<div
+									style={{
+										backgroundColor: " #F4F4F4",
+										borderRadius: "50%",
+										height: "12.5px",
+										width: "12.5px",
+										transform:
+											"translateX(9px) translateY(-18px)",
+									}}
+								></div>
 							</div>
 							<div style={{ marginLeft: "8px" }}>
-								{/* <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> */}
-								{/* <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div> */}
+								<div
+									style={{
+										backgroundColor: "#F4F4F4",
+										borderRadius: "50%",
+										flexGrow: 0,
+										height: "20px",
+										width: "20px",
+									}}
+								></div>
+								<div
+									style={{
+										width: 0,
+										height: 0,
+										borderTop: "2px solid transparent",
+										borderLeft: "6px solid #f4f4f4",
+										borderBottom: "2px solid transparent",
+										transform:
+											"translateX(16px) translateY(-4px) rotate(30deg)",
+									}}
+								></div>
 							</div>
 							<div style={{ marginLeft: "auto" }}>
 								<div
