@@ -2,7 +2,7 @@
 	"residential": [
 		{
 			"id": 1,
-			"typology": "residential",
+			"typology": "Residential",
 			"name": "Harwan",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/residential/harwan/01.jpg",
@@ -21,7 +21,7 @@
 		},
 		{
 			"id": 2,
-			"typology": "residential",
+			"typology": "Residential",
 			"name": "Ishber",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/residential/isber/01.jpg",
@@ -36,7 +36,7 @@
 		},
 		{
 			"id": 3,
-			"typology": "residential",
+			"typology": "Residential",
 			"name": "Ishber Home Stay",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/residential/isberHomeStay/banner.jpg",
@@ -58,8 +58,8 @@
 		},
 		{
 			"id": 4,
-			"typology": "residential",
-			"name": "khimber",
+			"typology": "Residential",
+			"name": "Khimber",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/residential/khimber/banner.jpg",
 			"images": [
@@ -77,8 +77,8 @@
 		},
 		{
 			"id": 5,
-			"typology": "residential",
-			"name": "shivpora Home Stay",
+			"typology": "Residential",
+			"name": "Shivpora Home Stay",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/residential/shivporaHomeStay/banner.jpg",
 			"images": [
@@ -102,7 +102,7 @@
 	"recreational": [
 		{
 			"id": 1,
-			"typology": "recreational",
+			"typology": "Recreational",
 			"name": "Nishat Hut",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/recreational/NishatHut/banner.jpg",
@@ -127,8 +127,8 @@
 	"international": [
 		{
 			"id": 1,
-			"typology": "international",
-			"name": "dubai Lobby",
+			"typology": "International",
+			"name": "Dubai Lobby",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/international/dubai/banner.jpg",
 			"images": [
@@ -151,8 +151,8 @@
 	"urban": [
 		{
 			"id": 1,
-			"typology": "urban",
-			"name": "hazratbal Regeneration",
+			"typology": "Urban",
+			"name": "Hazratbal Regeneration",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/urban/hazratbalRegeneration/banner.jpg",
 			"images": [
@@ -175,7 +175,7 @@
 	"commercial": [
 		{
 			"id": 1,
-			"typology": "commercial",
+			"typology": "Commercial",
 			"name": "CIE Habitat Center",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/commercial/CIEHabitatCenter/banner.jpg",
@@ -194,8 +194,8 @@
 		},
 		{
 			"id": 2,
-			"typology": "commercial",
-			"name": "Budgam complex",
+			"typology": "Commercial",
+			"name": "Budgam Complex",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/commercial/budgamComplex/banner.jpg",
 			"images": [
@@ -213,8 +213,8 @@
 		},
 		{
 			"id": 3,
-			"typology": "commercial",
-			"name": "confrence Room JK Police",
+			"typology": "Commercial",
+			"name": "Confrence Room JK Police",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/commercial/confrenceRoomJKPolice/banner.jpg",
 			"images": [
@@ -234,8 +234,8 @@
 		},
 		{
 			"id": 4,
-			"typology": "commercial",
-			"name": "dubai Lobby",
+			"typology": "Commercial",
+			"name": "Dubai Lobby",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/commercial/dubaiLobby/banner.jpg",
 			"images": [
@@ -254,8 +254,8 @@
 		},
 		{
 			"id": 5,
-			"typology": "commercial",
-			"name": "langalbal pahalgam",
+			"typology": "Commercial",
+			"name": "Langalbal pahalgam",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/commercial/langalbal/banner.jpg",
 			"images": ["/projects/commercial/langalbal/banner.jpg"],
@@ -269,8 +269,8 @@
 		},
 		{
 			"id": 6,
-			"typology": "commercial",
-			"name": "munawara",
+			"typology": "Commercial",
+			"name": "Munawara",
 			"description": "this is the description of the project with all details",
 			"banner": "/projects/commercial/munawara/banner.jpg",
 			"images": [
