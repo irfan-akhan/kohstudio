@@ -31,7 +31,7 @@ export default function ImageGrid() {
 					data-aos-delay="50"
 					colSpan={2}
 					rowSpan={2}
-					bg="url(/gallery/townsquare.jpg)"
+					bg="url(/gallery/02.jpg)"
 					backgroundRepeat="no-repeat"
 					backgroundSize="cover"
 					minH="90vh"
