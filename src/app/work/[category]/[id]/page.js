@@ -1,48 +1,48 @@
 "use client";
 import {
-  Box,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Button,
-  Container,
-  Flex,
-  Heading,
-  Text,
-  VStack,
+	Box,
+	Breadcrumb,
+	BreadcrumbItem,
+	BreadcrumbLink,
+	Button,
+	Container,
+	Flex,
+	Heading,
+	Text,
+	Image,
+	VStack,
 } from "@chakra-ui/react";
 
-import Image from "next/image";
 import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
-import { useParams, usePathname, useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import data from "../../../../../lib/data.json";
 import React, { useEffect, useState } from "react";
 
 const labelStyle = {
-  textTransform: "capitalize",
-  fontSize: "md",
-  fontWeight: 300,
-  marginBottom: "12px",
-  fontSize: "18px",
+	textTransform: "capitalize",
+	fontSize: "md",
+	fontWeight: 300,
+	marginBottom: "12px",
+	fontSize: "18px",
 };
 const ValueStyle = {
-  textTransform: "capitalize",
-  fontSize: "large",
-  fontWeight: 300,
-  marginBottom: "12px",
-  fontSize: "18px",
+	textTransform: "capitalize",
+	fontSize: "large",
+	fontWeight: 300,
+	marginBottom: "12px",
+	fontSize: "18px",
 };
 const ProjectDetails = () => {
-  const { id, category } = useParams();
-  const [projectInfo, setProjectInfo] = useState(null);
-  const router = useRouter();
-  useEffect(() => {
-    const projectInfo =
-      data[category].find((project) => project.id == id) || null;
-    setProjectInfo(projectInfo);
-  }, [category, id]);
+	const { id, category } = useParams();
+	const [projectInfo, setProjectInfo] = useState(null);
+	const router = useRouter();
+	useEffect(() => {
+		const projectInfo =
+			data[category].find((project) => project.id == id) || null;
+		setProjectInfo(projectInfo);
+	}, [category, id]);
 
 	const onClickHandler = (e) => {
 		let projectId = id;
@@ -151,13 +151,9 @@ const ProjectDetails = () => {
 							key={idx}
 							src={imageUrl}
 							alt={projectInfo.name}
-							width={300}
-							height={200}
-							style={{
-								maxHeight: { base: "85vh" },
-								width: "80%",
-								objectFit: "fill",
-							}}
+							width="90vw"
+							height="90vh"
+							objectFit="cover"
 						/>
 					))}
 				</VStack>
