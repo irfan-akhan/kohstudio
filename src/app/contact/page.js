@@ -176,9 +176,7 @@ export default function Contact() {
 									mt={{ sm: 3, md: 3, lg: 5 }}
 									color="gray.400"
 								>
-									F 301 First Floor <br />
-									Hawal First Junction
-									<br />
+									Mandibal Nowshera <br />
 									Srinagar 190011 <br />
 								</Text>
 								<Divider my="1.2rem" />
