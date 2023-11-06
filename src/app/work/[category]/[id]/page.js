@@ -40,7 +40,7 @@ const ProjectDetails = () => {
 	const router = useRouter();
 	useEffect(() => {
 		const projectInfo =
-			data[category].find((project) => project.id == id) || null;
+			data[category]?.find((project) => project.id == id) || null;
 		setProjectInfo(projectInfo);
 	}, [category, id]);
 
@@ -115,7 +115,7 @@ const ProjectDetails = () => {
 						</Box>
 						<Box>
 							<Text style={ValueStyle}>{projectInfo?.name}</Text>
-							<Text style={ValueStyle}>
+							<Text style={ValueStyle} textTransform="capitalize">
 								{projectInfo?.typology}
 							</Text>
 							<Text style={ValueStyle}>
@@ -178,7 +178,7 @@ const ProjectDetails = () => {
 					&nbsp; Previous
 				</Button>
 				<Button
-					isDisabled={id == data[category].length}
+					isDisabled={id == data[category]?.length}
 					onClick={onClickHandler}
 					name="next"
 					fontWeight="hairline"

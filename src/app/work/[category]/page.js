@@ -1,17 +1,16 @@
 "use client";
-import { Container, Flex, Heading } from "@chakra-ui/react";
+import { Container, Flex, Heading, Image } from "@chakra-ui/react";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import styles from "../../../../styles/project.module.css";
-import Image from "next/image";
+// import Image from "next/image";
 import data from "../../../../lib/data.json";
 import { useRouter, useParams } from "next/navigation";
 
 export default function page() {
 	const { category } = useParams();
 	const router = useRouter();
-	const projects = data[category];
-	console.log("first params", category);
+	const projects = data[category] || [];
 	return (
 		<Container my={"9rem"} maxW={"70rem"}>
 			<Heading textAlign={"center"} my={10} textTransform="uppercase">
@@ -38,8 +37,9 @@ export default function page() {
 								src={
 									item?.images ? item.images[0] : item?.banner
 								}
-								height={300}
-								width={300}
+								width="300px"
+								height="200px"
+								objectFit="cover"
 								alt="project_banner"
 								style={{ borderRadius: "10px" }}
 							/>

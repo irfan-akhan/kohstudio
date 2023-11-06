@@ -1,9 +1,7 @@
 let nodemailer = require("nodemailer");
 import { NextResponse, NextRequest } from "next/server";
-export async function POST(req, res) {
-	console.log("first", req);
+export async function POST(req) {
 	const data = await req.json();
-
 	let transporter = nodemailer.createTransport({
 		host: "shahjeefood.com",
 		port: "465",
@@ -377,10 +375,22 @@ export async function POST(req, res) {
 		</tbody>
 	</table>`,
 	};
-	console.log("mail", mailData);
-	transporter.sendMail(mailData, function (err, info) {
-		if (err) console.log("send mail", err);
-		else console.log("send mail no error", info);
-	});
-	return NextResponse.json({ id: 1 });
+	try {
+		const response = await transporter.sendMail(mailData);
+		console.log("send mail", response);
+	} catch (error) {
+		console.log(" mail error", error);
+		return NextResponse.json(
+			{ message: "failure" },
+			{
+				status: 400,
+			}
+		);
+	}
+	return NextResponse.json(
+		{ message: "success" },
+		{
+			status: 200,
+		}
+	);
 }

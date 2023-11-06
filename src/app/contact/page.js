@@ -23,13 +23,16 @@ import {
 } from "@chakra-ui/react";
 import { MdPhone, MdFacebook, MdOutlineEmail } from "react-icons/md";
 import { BsPerson, BsInstagram, BsLinkedin } from "react-icons/bs";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { EmailAlert } from "../../../components/EmailAlert";
 
 export default function Contact() {
 	const nameRef = useRef(null);
 	const emailRef = useRef(null);
 	const phoneRef = useRef(null);
 	const messageRef = useRef(null);
+	const [emailError, setEmailError] = useState(false);
+	const [alertState, setAlertState] = useState(false);
 	function submitHandler(e) {
 		e.preventDefault();
 		const data = {
@@ -47,12 +50,35 @@ export default function Contact() {
 			body: JSON.stringify(data),
 		})
 			.then((res) => {
-				console.log("Response received");
 				if (res.status === 200) {
 					console.log("Response succeeded!");
+					setAlertState(true);
+					setInterval(() => {
+						setAlertState(false);
+					}, 5000);
+					emailRef.current.value = "";
+					nameRef.current.value = "";
+					phoneRef.current.value = "";
+					messageRef.current.value = "";
+				} else {
+					setEmailError(true);
+					console.log("err email");
+					setAlertState(true);
+					setInterval(() => {
+						setEmailError(false);
+						setAlertState(false);
+					}, 5000);
 				}
 			})
-			.catch((err) => console.log("err", err));
+			.catch((err) => {
+				setEmailError(true);
+				console.log("err email", err);
+				setAlertState(true);
+				setInterval(() => {
+					setEmailError(false);
+					setAlertState(false);
+				}, 5000);
+			});
 	}
 
 	return (
@@ -82,6 +108,21 @@ export default function Contact() {
 					data-aos="fade-up"
 					data-aos-delay="150"
 				>
+					{alertState && (
+						<EmailAlert
+							status={emailError ? "error" : "success"}
+							title={
+								emailError
+									? "Request failure"
+									: "Application submitted!"
+							}
+							text={
+								emailError
+									? "Sorry something went wrong, Please again later"
+									: "Thanks for submitting your application. Our team will get back to you soon."
+							}
+						/>
+					)}
 					<Wrap>
 						<WrapItem width={{ base: "full", md: "70%" }}>
 							<Box width="full" bg="white">

@@ -10,7 +10,7 @@ export default function page() {
 	const router = useRouter();
 	const projects = Object?.values(data)?.flatMap((item) => item);
 	return (
-		<Container my={"9rem"} maxW={{base:"100%", lg:"70rem"}}>
+		<Container my={"9rem"} maxW={{ base: "100%", lg: "70rem" }}>
 			<Heading textAlign={"center"} my={10}>
 				WORK
 			</Heading>
@@ -31,30 +31,37 @@ export default function page() {
 						}}
 					>
 						<div className={styles.card__content}>
-							<Image
-								src={
-									data?.[item.typology?.toLowerCase()][0]
-										? data?.[
-												item.typology?.toLowerCase()
-										  ][0].images[0]
-										: data?.[
-												item.typology?.toLowerCase()
-										  ][0].banner
-								}
-								height={300}
-								width={300}
-								alt="project_banner"
-								style={{ borderRadius: "10px", width:"300px", height:"200px" }}
-							/>
-							<p className={styles.card__title}>{item?.name}</p>
-							<p className={styles.card__description}>
-								{item?.typology}
-							</p>
+							<div>
+								<Image
+									src={
+										data?.[item.typology][0]
+											? data?.[item.typology][0].images[0]
+											: data?.[item.typology][0].banner
+									}
+									height={300}
+									width={300}
+									mb="5"
+									alt="project_banner"
+									style={{
+										borderRadius: "10px",
+										width: "300px",
+										height: "200px",
+									}}
+								/>
+
+								<p className={styles.card__title}>
+									{item?.name}
+								</p>
+								<p className={styles.card__description}>
+									{item?.typology}
+								</p>
+							</div>
+
 							<div>
 								<Link href="#" className={styles.card__link}>
-									More Info
+									View Project&nbsp;
 									<BsArrowRight
-										fontSize={"2rem"}
+										fontSize={"1rem"}
 										color="#e7eae6"
 									/>
 								</Link>
