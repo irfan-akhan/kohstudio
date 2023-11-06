@@ -16,7 +16,7 @@ import {
 import Link from "next/link";
 import { BiChevronRight } from "react-icons/bi";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, notFound } from "next/navigation";
 import data from "../../../../../lib/data.json";
 import React, { useEffect, useState } from "react";
 
@@ -41,6 +41,9 @@ const ProjectDetails = () => {
 	useEffect(() => {
 		const projectInfo =
 			data[category]?.find((project) => project.id == id) || null;
+		if (!projectInfo) {
+			return notFound();
+		}
 		setProjectInfo(projectInfo);
 	}, [category, id]);
 

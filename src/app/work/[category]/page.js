@@ -5,12 +5,18 @@ import { BsArrowRight } from "react-icons/bs";
 import styles from "../../../../styles/project.module.css";
 // import Image from "next/image";
 import data from "../../../../lib/data.json";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter, useParams, notFound } from "next/navigation";
+import { useEffect } from "react";
 
 export default function page() {
 	const { category } = useParams();
 	const router = useRouter();
 	const projects = data[category] || [];
+	useEffect(() => {
+		if (!projects?.length) {
+			return notFound();
+		}
+	}, [projects]);
 	return (
 		<Container my={"9rem"} maxW={"70rem"}>
 			<Heading textAlign={"center"} my={10} textTransform="uppercase">
