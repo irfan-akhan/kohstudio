@@ -67,7 +67,7 @@ export default function WithSubnavigation() {
 							base: "center",
 							md: "left",
 						})}
-						// marginLeft={24}
+						marginLeft={{base:"auto", md: "0"}}
 						fontFamily={"heading"}
 						color={useColorModeValue("gray.800", "white")}
 						fontWeight={"700"}
